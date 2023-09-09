@@ -1,0 +1,122 @@
+---
+title: "Use Git and GitHub"
+author: "Yi Wang"
+format: 
+  html:
+    number-sections: true
+editor: visual
+---
+
+I assume you already have an account on <https://github.com>. If not, you need to create an account there.
+
+## Download Git
+
+1.  Go to the website <https://git-scm.com/downloads>, select an appropriate operating system, select "Click here to download"
+
+2.  Run the downloaded setup file with a name such as `Git-2.42.0.2-64-bit.exe`, and accept all default options.
+
+## Establish a connection between a Local repo and a Remote GitHub repo
+
+### Create your own
+
+3.  Sign in to your github account.
+
+4.  Create a GitHub **empty** repo (such as named `homework0`) on `GitHub` (<https://github.com>) but make sure it is empty (do not add Readme.md file)
+
+5.  Start a Git Bash Terminal window on your local computer. Navigate to the project directory; if you haven't yet created a project directory such as `homework0`, do
+
+    `mkdir project_dir` Example: `mkdir homework0`
+
+    Use `cd project_directory_name` to enter your local project directory;
+
+    `cd ..` \# back to the dir of the parent level of the current dir
+
+    use `ls` to list all files and directories or use `ls -al` to include all hidden files and directories. In your local Git Terminal, (Note at this moment your local project directory is empty)
+
+    ```         
+    echo "# homework0" >> README.md  #create a file README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main #rename the branch name to main
+    git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
+    git push -u origin main
+    ```
+
+    if your local project directory already 1) contains files and 2) had performed `init git` before, then push an existing repository from the command line
+
+    ```         
+    git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
+    git branch -M main
+    git push -u origin main
+    ```
+
+6.  in the pop-out `GitHub Sign in` window, click on `Sign in with your browser`.
+
+### clone an existing GitHub account
+
+This is an easier way to establish a connection between a local repo and a remote repo
+
+`git clone https://github.com/ywanglab/tflite-pi.git`
+
+## Some other common commands
+
+6.  check git status: `git status`
+
+7.  git add filename or git add . \# to add everything
+
+8.  use `git log` to check all commits
+
+9.  `git remote -v` Get the reminder of the remote repo
+
+10. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
+
+````         
+```         
+git rm --cached file1.txt 
+git commit -m "remove file1.txt" 
+```
+
+And to push changes to remote repo
+
+```         
+git push origin branch_name
+```
+````
+
+10. you might need to tell GitHub who you are. To to this type the following two commands in our terminal window:
+
+```         
+git config --global user.name "Your Name" 
+git config --global user.mail "your@email.com"
+```
+
+This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that **you need to use the email account that you used to open your GitHub account**.
+
+## When the upstream repo changes
+
+When Git tells you the upstream repo is ahead,
+
+11. Do `git pull`. Then you can commit and push a new version to the remote repo.
+
+## Collaborate
+
+12. `git clone remote-repo` to a local directory
+13. create a new branch: `git branch [your_branch_name]`
+14. `git checkout [your_branch_name]`
+15. Submitting your changes for review
+    1.  **Commit your changes locally.** Once you are ready to submit your changes, run these commands in your terminal:
+
+        ```         
+        git add -A                            # Stages all changes 
+        git status                            # Lists all staged changes 
+        git commit -m '[your commit message]' # Makes a git commit
+        ```
+
+        **Make a pull request.** A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:
+
+        ```         
+        git push origin HEAD # Push current branch to the same branch on GitHub
+        ```
+
+        Now, open the remote GitHub repo such as: [https://github.com/ywanglab/textbook](https://github.com/DS-100/textbook) in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
