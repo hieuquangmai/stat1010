@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "Summary",
+    "section": "",
+    "text": "Summary\nIn summary, this book has no content whatsoever."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Introduction",
+    "section": "",
+    "text": "Introduction\nThis is a book for STAT 1010: Introduction to Data Science offered at Auburn University at Montgomery.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "ch1.html",
+    "href": "ch1.html",
+    "title": "Use Git and Github",
+    "section": "",
+    "text": "### Install Git\n\nHello, World!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Preface",
+    "section": "",
+    "text": "Preface\nThis is a book for STAT 1010: Introduction to Data Science at Auburn University at Montgomery. The book is written using Quarto.\nTo learn more about Quarto books visit https://quarto.org/docs/books."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "References"
+  }
+]

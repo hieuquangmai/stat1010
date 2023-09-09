@@ -1,5 +1,6 @@
 project:
-  type: book
+  type: website
+  output-dir: docs
 
 book:
   title: "STAT 1010 Lecture Notes"
@@ -8,6 +9,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
+    - git.qmd
     - ch1.ipynb
     - summary.qmd
     - references.qmd
