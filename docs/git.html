@@ -154,7 +154,10 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#some-other-common-commands" id="toc-some-other-common-commands" class="nav-link" data-scroll-target="#some-other-common-commands"><span class="header-section-number">2.3</span> Some other common commands</a></li>
   <li><a href="#when-the-upstream-repo-changes" id="toc-when-the-upstream-repo-changes" class="nav-link" data-scroll-target="#when-the-upstream-repo-changes"><span class="header-section-number">2.4</span> When the upstream repo changes</a></li>
-  <li><a href="#collaborate" id="toc-collaborate" class="nav-link" data-scroll-target="#collaborate"><span class="header-section-number">2.5</span> Collaborate</a></li>
+  <li><a href="#create-branch" id="toc-create-branch" class="nav-link" data-scroll-target="#create-branch"><span class="header-section-number">2.5</span> Create branch</a></li>
+  <li><a href="#merge-branch-to-main-branch" id="toc-merge-branch-to-main-branch" class="nav-link" data-scroll-target="#merge-branch-to-main-branch"><span class="header-section-number">2.6</span> Merge branch to main branch</a></li>
+  <li><a href="#collaborate-directly-by-cloning-the-authors-github-repo" id="toc-collaborate-directly-by-cloning-the-authors-github-repo" class="nav-link" data-scroll-target="#collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">2.7</span> Collaborate directly by cloning the author’s github repo</a></li>
+  <li><a href="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" id="toc-collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="nav-link" data-scroll-target="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">2.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</a></li>
   </ul>
 </nav>
     </div>
@@ -220,7 +223,7 @@ git push -u origin main</code></pre></li>
 </section>
 <section id="clone-an-existing-github-account" class="level3" data-number="2.2.2">
 <h3 data-number="2.2.2" class="anchored" data-anchor-id="clone-an-existing-github-account"><span class="header-section-number">2.2.2</span> clone an existing GitHub account</h3>
-<p>This is an easier way to establish a connection between a local repo and a remote repo</p>
+<p>This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.</p>
 <p><code>git clone https://github.com/ywanglab/tflite-pi.git</code></p>
 </section>
 </section>
@@ -248,7 +251,7 @@ And to push changes to remote repo
 ```         
 git push origin branch_name
 ```</code></pre>
-<ol start="10" type="1">
+<ol start="14" type="1">
 <li>you might need to tell GitHub who you are. To to this type the following two commands in our terminal window:</li>
 </ol>
 <pre><code>git config --global user.name "Your Name" 
@@ -258,13 +261,30 @@ git config --global user.mail "your@email.com"</code></pre>
 <section id="when-the-upstream-repo-changes" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="when-the-upstream-repo-changes"><span class="header-section-number">2.4</span> When the upstream repo changes</h2>
 <p>When Git tells you the upstream repo is ahead,</p>
-<ol start="11" type="1">
+<ol start="15" type="1">
 <li>Do <code>git pull</code>. Then you can commit and push a new version to the remote repo.</li>
 </ol>
 </section>
-<section id="collaborate" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="collaborate"><span class="header-section-number">2.5</span> Collaborate</h2>
-<ol start="12" type="1">
+<section id="create-branch" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="create-branch"><span class="header-section-number">2.5</span> Create branch</h2>
+<ol start="16" type="1">
+<li>To add a branch to the main branch <code>git branch branchname</code></li>
+</ol>
+<p>Switch the branch <code>git checkout branchname</code></p>
+<p>Adding a file in branch <code>echo "#content" &gt;&gt; filename.txt</code></p>
+<p>Then <code>add</code> the file and commit the file. To create the branch remotely we <strong>have to use</strong></p>
+<p><code>git push --set-upstream origin branchname</code></p>
+</section>
+<section id="merge-branch-to-main-branch" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="merge-branch-to-main-branch"><span class="header-section-number">2.6</span> Merge branch to main branch</h2>
+<p>Switch the branch again to the main using<br>
+<code>git checkout main</code></p>
+<p>on the <code>main</code> branch, Merge command to merge the branches<br>
+<code>git merge mybranch</code></p>
+</section>
+<section id="collaborate-directly-by-cloning-the-authors-github-repo" class="level2" data-number="2.7">
+<h2 data-number="2.7" class="anchored" data-anchor-id="collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">2.7</span> Collaborate directly by cloning the author’s github repo</h2>
+<ol start="16" type="1">
 <li><code>git clone remote-repo</code> to a local directory</li>
 <li>create a new branch: <code>git branch [your_branch_name]</code></li>
 <li><code>git checkout [your_branch_name]</code></li>
@@ -278,6 +298,14 @@ git commit -m '[your commit message]' # Makes a git commit</code></pre>
 <pre><code>git push origin HEAD # Push current branch to the same branch on GitHub</code></pre>
 <p>Now, open the remote GitHub repo such as: <a href="https://github.com/DS-100/textbook">https://github.com/ywanglab/textbook</a> in your browser. You should see a <strong>green</strong> button titled “Compare &amp; pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button.</p></li>
 </ol></li>
+</ol>
+</section>
+<section id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="level2" data-number="2.8">
+<h2 data-number="2.8" class="anchored" data-anchor-id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">2.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</h2>
+<ol start="20" type="1">
+<li>after forking a GitHub repo to your own GitHub account, git clone that account to your local repo.</li>
+<li>makes changes to a file, and <code>git add, commit and push</code> the changes to the remote repo in your account.</li>
+<li>Then go to your remote repo on the GitHub site and <strong>Create pull request</strong>.</li>
 </ol>
 
 

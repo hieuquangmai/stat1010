@@ -25,7 +25,7 @@
     "href": "git.html#establish-a-connection-between-a-local-repo-and-a-remote-github-repo",
     "title": "2  Use Git and GitHub",
     "section": "2.2 Establish a connection between a Local repo and a Remote GitHub repo",
-    "text": "2.2 Establish a connection between a Local repo and a Remote GitHub repo\n\n2.2.1 Create your own\n\nSign in to your github account.\nCreate a GitHub empty repo (such as named homework0) on GitHub (https://github.com) but make sure it is empty (do not add Readme.md file)\nStart a Git Bash Terminal window on your local computer. Navigate to the project directory; if you haven’t yet created a project directory such as homework0, do\nmkdir project_dir Example: mkdir homework0\nUse cd project_directory_name to enter your local project directory;\ncd .. # back to the dir of the parent level of the current dir\nuse ls to list all files and directories or use ls -al to include all hidden files and directories. In your local Git Terminal, (Note at this moment your local project directory is empty)\necho \"# homework0\" &gt;&gt; README.md  #create a file README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main #rename the branch name to main\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit push -u origin main\nif your local project directory already 1) contains files and 2) had performed init git before, then push an existing repository from the command line\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit branch -M main\ngit push -u origin main\nin the pop-out GitHub Sign in window, click on Sign in with your browser.\n\n\n\n2.2.2 clone an existing GitHub account\nThis is an easier way to establish a connection between a local repo and a remote repo\ngit clone https://github.com/ywanglab/tflite-pi.git"
+    "text": "2.2 Establish a connection between a Local repo and a Remote GitHub repo\n\n2.2.1 Create your own\n\nSign in to your github account.\nCreate a GitHub empty repo (such as named homework0) on GitHub (https://github.com) but make sure it is empty (do not add Readme.md file)\nStart a Git Bash Terminal window on your local computer. Navigate to the project directory; if you haven’t yet created a project directory such as homework0, do\nmkdir project_dir Example: mkdir homework0\nUse cd project_directory_name to enter your local project directory;\ncd .. # back to the dir of the parent level of the current dir\nuse ls to list all files and directories or use ls -al to include all hidden files and directories. In your local Git Terminal, (Note at this moment your local project directory is empty)\necho \"# homework0\" &gt;&gt; README.md  #create a file README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main #rename the branch name to main\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit push -u origin main\nif your local project directory already 1) contains files and 2) had performed init git before, then push an existing repository from the command line\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit branch -M main\ngit push -u origin main\nin the pop-out GitHub Sign in window, click on Sign in with your browser.\n\n\n\n2.2.2 clone an existing GitHub account\nThis is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.\ngit clone https://github.com/ywanglab/tflite-pi.git"
   },
   {
     "objectID": "git.html#some-other-common-commands",
@@ -42,11 +42,32 @@
     "text": "2.4 When the upstream repo changes\nWhen Git tells you the upstream repo is ahead,\n\nDo git pull. Then you can commit and push a new version to the remote repo."
   },
   {
-    "objectID": "git.html#collaborate",
-    "href": "git.html#collaborate",
+    "objectID": "git.html#create-branch",
+    "href": "git.html#create-branch",
     "title": "2  Use Git and GitHub",
-    "section": "2.5 Collaborate",
-    "text": "2.5 Collaborate\n\ngit clone remote-repo to a local directory\ncreate a new branch: git branch [your_branch_name]\ngit checkout [your_branch_name]\nSubmitting your changes for review\n\nCommit your changes locally. Once you are ready to submit your changes, run these commands in your terminal:\ngit add -A                            # Stages all changes \ngit status                            # Lists all staged changes \ngit commit -m '[your commit message]' # Makes a git commit\nMake a pull request. A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:\ngit push origin HEAD # Push current branch to the same branch on GitHub\nNow, open the remote GitHub repo such as: https://github.com/ywanglab/textbook in your browser. You should see a green button titled “Compare & pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button."
+    "section": "2.5 Create branch",
+    "text": "2.5 Create branch\n\nTo add a branch to the main branch git branch branchname\n\nSwitch the branch git checkout branchname\nAdding a file in branch echo \"#content\" &gt;&gt; filename.txt\nThen add the file and commit the file. To create the branch remotely we have to use\ngit push --set-upstream origin branchname"
+  },
+  {
+    "objectID": "git.html#merge-branch-to-main-branch",
+    "href": "git.html#merge-branch-to-main-branch",
+    "title": "2  Use Git and GitHub",
+    "section": "2.6 Merge branch to main branch",
+    "text": "2.6 Merge branch to main branch\nSwitch the branch again to the main using\ngit checkout main\non the main branch, Merge command to merge the branches\ngit merge mybranch"
+  },
+  {
+    "objectID": "git.html#collaborate-directly-by-cloning-the-authors-github-repo",
+    "href": "git.html#collaborate-directly-by-cloning-the-authors-github-repo",
+    "title": "2  Use Git and GitHub",
+    "section": "2.7 Collaborate directly by cloning the author’s github repo",
+    "text": "2.7 Collaborate directly by cloning the author’s github repo\n\ngit clone remote-repo to a local directory\ncreate a new branch: git branch [your_branch_name]\ngit checkout [your_branch_name]\nSubmitting your changes for review\n\nCommit your changes locally. Once you are ready to submit your changes, run these commands in your terminal:\ngit add -A                            # Stages all changes \ngit status                            # Lists all staged changes \ngit commit -m '[your commit message]' # Makes a git commit\nMake a pull request. A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:\ngit push origin HEAD # Push current branch to the same branch on GitHub\nNow, open the remote GitHub repo such as: https://github.com/ywanglab/textbook in your browser. You should see a green button titled “Compare & pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button."
+  },
+  {
+    "objectID": "git.html#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request",
+    "href": "git.html#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request",
+    "title": "2  Use Git and GitHub",
+    "section": "2.8 Collaborate by fork a GitHub repo and commit the fork repo and create a pull request",
+    "text": "2.8 Collaborate by fork a GitHub repo and commit the fork repo and create a pull request\n\nafter forking a GitHub repo to your own GitHub account, git clone that account to your local repo.\nmakes changes to a file, and git add, commit and push the changes to the remote repo in your account.\nThen go to your remote repo on the GitHub site and Create pull request."
   },
   {
     "objectID": "ch1.html",

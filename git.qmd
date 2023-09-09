@@ -55,7 +55,7 @@ I assume you already have an account on <https://github.com>. If not, you need t
 
 ### clone an existing GitHub account
 
-This is an easier way to establish a connection between a local repo and a remote repo
+This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.
 
 `git clone https://github.com/ywanglab/tflite-pi.git`
 
@@ -93,7 +93,7 @@ git push origin branch_name
 ```
 ````
 
-10. you might need to tell GitHub who you are. To to this type the following two commands in our terminal window:
+14. you might need to tell GitHub who you are. To to this type the following two commands in our terminal window:
 
 ```         
 git config --global user.name "Your Name" 
@@ -106,14 +106,34 @@ This will change the Git configuration in a way that anytime you use Git, it wil
 
 When Git tells you the upstream repo is ahead,
 
-11. Do `git pull`. Then you can commit and push a new version to the remote repo.
+15. Do `git pull`. Then you can commit and push a new version to the remote repo.
 
-## Collaborate
+## Create branch
 
-12. `git clone remote-repo` to a local directory
-13. create a new branch: `git branch [your_branch_name]`
-14. `git checkout [your_branch_name]`
-15. Submitting your changes for review
+16. To add a branch to the main branch `git branch branchname`
+
+Switch the branch `git checkout branchname`
+
+Adding a file in branch `echo "#content" >> filename.txt`
+
+Then `add` the file and commit the file. To create the branch remotely we **have to use**
+
+`git push --set-upstream origin branchname`
+
+## Merge branch to main branch
+
+Switch the branch again to the main using\
+`git checkout main`
+
+on the `main` branch, Merge command to merge the branches\
+`git merge mybranch`
+
+## Collaborate directly by cloning the author's github repo
+
+16. `git clone remote-repo` to a local directory
+17. create a new branch: `git branch [your_branch_name]`
+18. `git checkout [your_branch_name]`
+19. Submitting your changes for review
     1.  **Commit your changes locally.** Once you are ready to submit your changes, run these commands in your terminal:
 
         ```         
@@ -129,3 +149,9 @@ When Git tells you the upstream repo is ahead,
         ```
 
         Now, open the remote GitHub repo such as: [https://github.com/ywanglab/textbook](https://github.com/DS-100/textbook) in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
+
+## Collaborate by fork a GitHub repo and commit the fork repo and create a pull request
+
+20. after forking a GitHub repo to your own GitHub account, git clone that account to your local repo.
+21. makes changes to a file, and `git add, commit and push` the changes to the remote repo in your account.
+22. Then go to your remote repo on the GitHub site and **Create pull request**.
