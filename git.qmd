@@ -67,13 +67,17 @@ This is an easier way to establish a connection between a local repo and a remot
 
 8.  use `git log` to check all commits. Use `git log –pretty=oneline` for shorter display.
 
-9.  use `git checkout .` to revert back to previous commit. Any changes after the previous commit will be abandoned. 
+9.  use `git checkout .` to revert back to previous commit. Any changes after the previous commit will be abandoned.
 
 10. to get to a previous commit, use `git checkout six_character_commit_ID`. To get back to main, use `git checkout main`.
 
-11. `git remote -v` Get the reminder of the remote repo
+11. To permanently go back to a previous commit, use
 
-12. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
+    `git reset –hard six_char_commit_ID`git
+
+12. `git remote -v` Get the reminder of the remote repo
+
+13. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
 
 ````         
 ```         
