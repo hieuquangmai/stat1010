@@ -65,7 +65,7 @@ This is an easier way to establish a connection between a local repo and a remot
 
 7.  git add filename or git add . \# to add everything
 
-8.  use `git log` to check all commits. Use \`git log --pretty=online for shorter display
+8.  use `git log` to check all commits. Use `git log –pretty=oneline` for shorter display
 
 9.  `git remote -v` Get the reminder of the remote repo
 
