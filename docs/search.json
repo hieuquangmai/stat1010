@@ -33,5 +33,47 @@
     "title": "References",
     "section": "",
     "text": "References"
+  },
+  {
+    "objectID": "git.html",
+    "href": "git.html",
+    "title": "Use Git and GitHub",
+    "section": "",
+    "text": "I assume you already have an account on https://github.com. If not, you need to create an account there."
+  },
+  {
+    "objectID": "git.html#download-git",
+    "href": "git.html#download-git",
+    "title": "Use Git and GitHub",
+    "section": "1 Download Git",
+    "text": "1 Download Git\n\nGo to the website https://git-scm.com/downloads, select an appropriate operating system, select “Click here to download”\nRun the downloaded setup file with a name such as Git-2.42.0.2-64-bit.exe, and accept all default options."
+  },
+  {
+    "objectID": "git.html#establish-a-connection-between-a-local-repo-and-a-remote-github-repo",
+    "href": "git.html#establish-a-connection-between-a-local-repo-and-a-remote-github-repo",
+    "title": "Use Git and GitHub",
+    "section": "2 Establish a connection between a Local repo and a Remote GitHub repo",
+    "text": "2 Establish a connection between a Local repo and a Remote GitHub repo\n\n2.1 Create your own\n\nSign in to your github account.\nCreate a GitHub empty repo (such as named homework0) on GitHub (https://github.com) but make sure it is empty (do not add Readme.md file)\nStart a Git Bash Terminal window on your local computer. Navigate to the project directory; if you haven’t yet created a project directory such as homework0, do\nmkdir project_dir Example: mkdir homework0\nUse cd project_directory_name to enter your local project directory;\ncd .. # back to the dir of the parent level of the current dir\nuse ls to list all files and directories or use ls -al to include all hidden files and directories. In your local Git Terminal, (Note at this moment your local project directory is empty)\necho \"# homework0\" &gt;&gt; README.md  #create a file README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main #rename the branch name to main\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit push -u origin main\nif your local project directory already 1) contains files and 2) had performed init git before, then push an existing repository from the command line\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit branch -M main\ngit push -u origin main\nin the pop-out GitHub Sign in window, click on Sign in with your browser.\n\n\n\n2.2 clone an existing GitHub account\nThis is an easier way to establish a connection between a local repo and a remote repo\ngit clone https://github.com/ywanglab/tflite-pi.git"
+  },
+  {
+    "objectID": "git.html#some-other-common-commands",
+    "href": "git.html#some-other-common-commands",
+    "title": "Use Git and GitHub",
+    "section": "3 Some other common commands",
+    "text": "3 Some other common commands\n\ncheck git status: git status\ngit add filename or git add . # to add everything\nuse git log to check all commits. Use git log –pretty=oneline for shorter display.\nuse git checkout . to revert back to previous commit. Any changes after the previous commit will be abandoned.\nto get to a previous commit, use git checkout six_character_commit_ID. To get back to main, use git checkout main.\nTo permanently go back to a previous commit, use\ngit reset –hard six_char_commit_IDgit\ngit remote -v Get the reminder of the remote repo\nif you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:\n\n```         \ngit rm --cached file1.txt \ngit commit -m \"remove file1.txt\" \n\n```\n\nAnd to push changes to remote repo\n\n```         \ngit push origin branch_name\n```\n\nyou might need to tell GitHub who you are. To to this type the following two commands in our terminal window:\n\ngit config --global user.name \"Your Name\" \ngit config --global user.mail \"your@email.com\"\nThis will change the Git configuration in a way that anytime you use Git, it will know this information. Note that you need to use the email account that you used to open your GitHub account."
+  },
+  {
+    "objectID": "git.html#when-the-upstream-repo-changes",
+    "href": "git.html#when-the-upstream-repo-changes",
+    "title": "Use Git and GitHub",
+    "section": "4 When the upstream repo changes",
+    "text": "4 When the upstream repo changes\nWhen Git tells you the upstream repo is ahead,\n\nDo git pull. Then you can commit and push a new version to the remote repo."
+  },
+  {
+    "objectID": "git.html#collaborate",
+    "href": "git.html#collaborate",
+    "title": "Use Git and GitHub",
+    "section": "5 Collaborate",
+    "text": "5 Collaborate\n\ngit clone remote-repo to a local directory\ncreate a new branch: git branch [your_branch_name]\ngit checkout [your_branch_name]\nSubmitting your changes for review\n\nCommit your changes locally. Once you are ready to submit your changes, run these commands in your terminal:\ngit add -A                            # Stages all changes \ngit status                            # Lists all staged changes \ngit commit -m '[your commit message]' # Makes a git commit\nMake a pull request. A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:\ngit push origin HEAD # Push current branch to the same branch on GitHub\nNow, open the remote GitHub repo such as: https://github.com/ywanglab/textbook in your browser. You should see a green button titled “Compare & pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button."
   }
 ]
