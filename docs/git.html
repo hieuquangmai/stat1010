@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ch1.html" rel="next">
+<link href="./summary.html" rel="next">
 <link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -120,14 +120,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Use Git and Github</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -147,10 +141,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#download-git" id="toc-download-git" class="nav-link active" data-scroll-target="#download-git"><span class="header-section-number">2.1</span> Download Git</a></li>
-  <li><a href="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo" id="toc-establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="nav-link" data-scroll-target="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">2.2</span> Establish a connection between a Local repo and a Remote GitHub repo</a>
+  <li><a href="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo" id="toc-establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="nav-link" data-scroll-target="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">2.2</span> Establish a connection between a local repo and a remote GitHub repo</a>
   <ul class="collapse">
   <li><a href="#create-your-own" id="toc-create-your-own" class="nav-link" data-scroll-target="#create-your-own"><span class="header-section-number">2.2.1</span> Create your own</a></li>
-  <li><a href="#clone-an-existing-github-account" id="toc-clone-an-existing-github-account" class="nav-link" data-scroll-target="#clone-an-existing-github-account"><span class="header-section-number">2.2.2</span> clone an existing GitHub account</a></li>
+  <li><a href="#clone-an-existing-github-account" id="toc-clone-an-existing-github-account" class="nav-link" data-scroll-target="#clone-an-existing-github-account"><span class="header-section-number">2.2.2</span> Clone an existing GitHub account</a></li>
   </ul></li>
   <li><a href="#some-other-common-commands" id="toc-some-other-common-commands" class="nav-link" data-scroll-target="#some-other-common-commands"><span class="header-section-number">2.3</span> Some other common commands</a></li>
   <li><a href="#when-the-upstream-repo-changes" id="toc-when-the-upstream-repo-changes" class="nav-link" data-scroll-target="#when-the-upstream-repo-changes"><span class="header-section-number">2.4</span> When the upstream repo changes</a></li>
@@ -196,17 +190,17 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 <section id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">2.2</span> Establish a connection between a Local repo and a Remote GitHub repo</h2>
+<h2 data-number="2.2" class="anchored" data-anchor-id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">2.2</span> Establish a connection between a local repo and a remote GitHub repo</h2>
 <section id="create-your-own" class="level3" data-number="2.2.1">
 <h3 data-number="2.2.1" class="anchored" data-anchor-id="create-your-own"><span class="header-section-number">2.2.1</span> Create your own</h3>
 <ol start="3" type="1">
 <li><p>Sign in to your github account.</p></li>
 <li><p>Create a GitHub <strong>empty</strong> repo (such as named <code>homework0</code>) on <code>GitHub</code> (<a href="https://github.com" class="uri">https://github.com</a>) but make sure it is empty (do not add Readme.md file)</p></li>
-<li><p>Start a Git Bash Terminal window on your local computer. Navigate to the project directory; if you haven’t yet created a project directory such as <code>homework0</code>, do</p>
+<li><p>Start a Git Bash Terminal window on your local computer (You could also use the Terminal Window in RStudio or VSC). Navigate to the project directory; if you haven’t yet created a project directory such as <code>homework0</code>, do</p>
 <p><code>mkdir project_dir</code> Example: <code>mkdir homework0</code></p>
 <p>Use <code>cd project_directory_name</code> to enter your local project directory;</p>
 <p><code>cd ..</code> # back to the dir of the parent level of the current dir</p>
-<p>use <code>ls</code> to list all files and directories or use <code>ls -al</code> to include all hidden files and directories. In your local Git Terminal, (Note at this moment your local project directory is empty)</p>
+<p>use <code>ls</code> to list all files and directories or use <code>ls -al</code> to include all hidden files and directories. In your local Git Terminal, (note at this moment your local project directory is empty)</p>
 <pre><code>echo "# homework0" &gt;&gt; README.md  #create a file README.md
 git init
 git add README.md
@@ -214,34 +208,34 @@ git commit -m "first commit"
 git branch -M main #rename the branch name to main
 git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
 git push -u origin main</code></pre>
-<p>if your local project directory already 1) contains files and 2) had performed <code>init git</code> before, then push an existing repository from the command line</p>
-<pre><code>git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
+<p>if your local project directory already 1) contains files and 2) had performed <code>init git</code> before, then</p>
+<pre><code>git remote add origin https://github.com/ywanglab/homework0.git` #(change the remote to your remote repo)
 git branch -M main
 git push -u origin main</code></pre></li>
 <li><p>in the pop-out <code>GitHub Sign in</code> window, click on <code>Sign in with your browser</code>.</p></li>
 </ol>
 </section>
 <section id="clone-an-existing-github-account" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="clone-an-existing-github-account"><span class="header-section-number">2.2.2</span> clone an existing GitHub account</h3>
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="clone-an-existing-github-account"><span class="header-section-number">2.2.2</span> Clone an existing GitHub account</h3>
 <p>This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.</p>
-<p><code>git clone https://github.com/ywanglab/tflite-pi.git</code></p>
+<p><code>git clone https://github.com/ywanglab/tflite-pi.git</code> (change the remote repo to your remote repo)</p>
 </section>
 </section>
 <section id="some-other-common-commands" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="some-other-common-commands"><span class="header-section-number">2.3</span> Some other common commands</h2>
 <ol start="6" type="1">
 <li><p>check git status: <code>git status</code></p></li>
-<li><p>git add filename or git add . # to add everything</p></li>
-<li><p>use <code>git log</code> to check all commits. Use <code>git log –pretty=oneline</code> for shorter display.</p></li>
+<li><p><code>git add filename</code> or <code>git add .</code># to add everything</p></li>
+<li><p>use <code>git log</code> to check all commits. Use <code>git log --pretty=oneline</code> for shorter display.</p></li>
 <li><p>use <code>git checkout .</code> to revert back to previous commit. Any changes after the previous commit will be abandoned.</p></li>
 <li><p>to get to a previous commit, use <code>git checkout six_character_commit_ID</code>. To get back to main, use <code>git checkout main</code>.</p></li>
 <li><p>To permanently go back to a previous commit, use</p>
-<p><code>git reset –hard six_char_commit_ID</code>git</p></li>
+<p><code>git reset –hard six_char_commit_ID</code></p></li>
 <li><p><code>git remote -v</code> Get the reminder of the remote repo</p></li>
 <li><p>if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:</p></li>
 </ol>
 <pre><code>```         
-git rm --cached file1.txt 
+git rm -rf --cached file1.txt # otherwise, remove --cached
 git commit -m "remove file1.txt" 
 
 ```
@@ -252,7 +246,7 @@ And to push changes to remote repo
 git push origin branch_name
 ```</code></pre>
 <ol start="14" type="1">
-<li>you might need to tell GitHub who you are. To to this type the following two commands in our terminal window:</li>
+<li>you might need to tell GitHub who you are. To to this type the following two commands in your terminal window:</li>
 </ol>
 <pre><code>git config --global user.name "Your Name" 
 git config --global user.mail "your@email.com"</code></pre>
@@ -280,7 +274,7 @@ git config --global user.mail "your@email.com"</code></pre>
 <p>Switch the branch again to the main using<br>
 <code>git checkout main</code></p>
 <p>on the <code>main</code> branch, Merge command to merge the branches<br>
-<code>git merge mybranch</code></p>
+<code>git merge branchname</code></p>
 </section>
 <section id="collaborate-directly-by-cloning-the-authors-github-repo" class="level2" data-number="2.7">
 <h2 data-number="2.7" class="anchored" data-anchor-id="collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">2.7</span> Collaborate directly by cloning the author’s github repo</h2>
@@ -303,8 +297,8 @@ git commit -m '[your commit message]' # Makes a git commit</code></pre>
 <section id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="level2" data-number="2.8">
 <h2 data-number="2.8" class="anchored" data-anchor-id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">2.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</h2>
 <ol start="20" type="1">
-<li>after forking a GitHub repo to your own GitHub account, git clone that account to your local repo.</li>
-<li>makes changes to a file, and <code>git add, commit and push</code> the changes to the remote repo in your account.</li>
+<li>after forking a GitHub repo to your own GitHub account, <code>git clone</code> that account to your local repo.</li>
+<li>make changes to a file, and <code>git add, commit and push</code> the changes to the remote repo in your account.</li>
 <li>Then go to your remote repo on the GitHub site and <strong>Create pull request</strong>.</li>
 </ol>
 
@@ -552,8 +546,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch1.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Use Git and Github</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./summary.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

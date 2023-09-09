@@ -10,7 +10,6 @@ book:
     - index.qmd
     - intro.qmd
     - git.qmd
-    - ch1.ipynb
     - summary.qmd
     - references.qmd
 
