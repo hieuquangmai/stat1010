@@ -8,7 +8,7 @@
 
 <meta name="author" content="Yi Wang">
 
-<title>STAT 1010 Lecture Notes - 2&nbsp; Use Git and GitHub</title>
+<title>STAT 1010 Lecture Notes - 3&nbsp; Use Git and GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./summary.html" rel="next">
-<link href="./intro.html" rel="prev">
+<link href="./computingEnvironment.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./git.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Use Git and GitHub</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./git.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Use Git and GitHub</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -114,14 +114,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./computingEnvironment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./git.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Use Git and GitHub</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Use Git and GitHub</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -140,18 +146,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#download-git" id="toc-download-git" class="nav-link active" data-scroll-target="#download-git"><span class="header-section-number">2.1</span> Download Git</a></li>
-  <li><a href="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo" id="toc-establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="nav-link" data-scroll-target="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">2.2</span> Establish a connection between a local repo and a remote GitHub repo</a>
+  <li><a href="#download-git" id="toc-download-git" class="nav-link active" data-scroll-target="#download-git"><span class="header-section-number">3.1</span> Download Git</a></li>
+  <li><a href="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo" id="toc-establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="nav-link" data-scroll-target="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">3.2</span> Establish a connection between a local repo and a remote GitHub repo</a>
   <ul class="collapse">
-  <li><a href="#create-your-own" id="toc-create-your-own" class="nav-link" data-scroll-target="#create-your-own"><span class="header-section-number">2.2.1</span> Create your own</a></li>
-  <li><a href="#clone-an-existing-github-account" id="toc-clone-an-existing-github-account" class="nav-link" data-scroll-target="#clone-an-existing-github-account"><span class="header-section-number">2.2.2</span> Clone an existing GitHub account</a></li>
+  <li><a href="#create-your-own" id="toc-create-your-own" class="nav-link" data-scroll-target="#create-your-own"><span class="header-section-number">3.2.1</span> Create your own</a></li>
+  <li><a href="#clone-an-existing-github-account" id="toc-clone-an-existing-github-account" class="nav-link" data-scroll-target="#clone-an-existing-github-account"><span class="header-section-number">3.2.2</span> Clone an existing GitHub account</a></li>
   </ul></li>
-  <li><a href="#some-other-common-commands" id="toc-some-other-common-commands" class="nav-link" data-scroll-target="#some-other-common-commands"><span class="header-section-number">2.3</span> Some other common commands</a></li>
-  <li><a href="#when-the-upstream-repo-changes" id="toc-when-the-upstream-repo-changes" class="nav-link" data-scroll-target="#when-the-upstream-repo-changes"><span class="header-section-number">2.4</span> When the upstream repo changes</a></li>
-  <li><a href="#create-branch" id="toc-create-branch" class="nav-link" data-scroll-target="#create-branch"><span class="header-section-number">2.5</span> Create branch</a></li>
-  <li><a href="#merge-branch-to-main-branch" id="toc-merge-branch-to-main-branch" class="nav-link" data-scroll-target="#merge-branch-to-main-branch"><span class="header-section-number">2.6</span> Merge branch to main branch</a></li>
-  <li><a href="#collaborate-directly-by-cloning-the-authors-github-repo" id="toc-collaborate-directly-by-cloning-the-authors-github-repo" class="nav-link" data-scroll-target="#collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">2.7</span> Collaborate directly by cloning the author’s github repo</a></li>
-  <li><a href="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" id="toc-collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="nav-link" data-scroll-target="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">2.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</a></li>
+  <li><a href="#some-other-common-commands" id="toc-some-other-common-commands" class="nav-link" data-scroll-target="#some-other-common-commands"><span class="header-section-number">3.3</span> Some other common commands</a></li>
+  <li><a href="#when-the-upstream-repo-changes" id="toc-when-the-upstream-repo-changes" class="nav-link" data-scroll-target="#when-the-upstream-repo-changes"><span class="header-section-number">3.4</span> When the upstream repo changes</a></li>
+  <li><a href="#create-branch" id="toc-create-branch" class="nav-link" data-scroll-target="#create-branch"><span class="header-section-number">3.5</span> Create branch</a></li>
+  <li><a href="#merge-branch-to-main-branch" id="toc-merge-branch-to-main-branch" class="nav-link" data-scroll-target="#merge-branch-to-main-branch"><span class="header-section-number">3.6</span> Merge branch to main branch</a></li>
+  <li><a href="#collaborate-directly-by-cloning-the-authors-github-repo" id="toc-collaborate-directly-by-cloning-the-authors-github-repo" class="nav-link" data-scroll-target="#collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">3.7</span> Collaborate directly by cloning the author’s github repo</a></li>
+  <li><a href="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" id="toc-collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="nav-link" data-scroll-target="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">3.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</a></li>
   </ul>
 </nav>
     </div>
@@ -160,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Use Git and GitHub</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Use Git and GitHub</span></h1>
 </div>
 
 
@@ -182,17 +188,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>I assume you already have an account on <a href="https://github.com" class="uri">https://github.com</a>. If not, you need to create an account there.</p>
-<section id="download-git" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="download-git"><span class="header-section-number">2.1</span> Download Git</h2>
+<section id="download-git" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="download-git"><span class="header-section-number">3.1</span> Download Git</h2>
 <ol type="1">
 <li><p>Go to the website <a href="https://git-scm.com/downloads" class="uri">https://git-scm.com/downloads</a>, select an appropriate operating system, select “Click here to download”</p></li>
 <li><p>Run the downloaded setup file with a name such as <code>Git-2.42.0.2-64-bit.exe</code>, and accept all default options.</p></li>
 </ol>
 </section>
-<section id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">2.2</span> Establish a connection between a local repo and a remote GitHub repo</h2>
-<section id="create-your-own" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="create-your-own"><span class="header-section-number">2.2.1</span> Create your own</h3>
+<section id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">3.2</span> Establish a connection between a local repo and a remote GitHub repo</h2>
+<section id="create-your-own" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="create-your-own"><span class="header-section-number">3.2.1</span> Create your own</h3>
 <ol start="3" type="1">
 <li><p>Sign in to your github account.</p></li>
 <li><p>Create a GitHub <strong>empty</strong> repo (such as named <code>homework0</code>) on <code>GitHub</code> (<a href="https://github.com" class="uri">https://github.com</a>) but make sure it is empty (do not add Readme.md file)</p></li>
@@ -215,14 +221,14 @@ git push -u origin main</code></pre></li>
 <li><p>in the pop-out <code>GitHub Sign in</code> window, click on <code>Sign in with your browser</code>.</p></li>
 </ol>
 </section>
-<section id="clone-an-existing-github-account" class="level3" data-number="2.2.2">
-<h3 data-number="2.2.2" class="anchored" data-anchor-id="clone-an-existing-github-account"><span class="header-section-number">2.2.2</span> Clone an existing GitHub account</h3>
+<section id="clone-an-existing-github-account" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="clone-an-existing-github-account"><span class="header-section-number">3.2.2</span> Clone an existing GitHub account</h3>
 <p>This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.</p>
 <p><code>git clone https://github.com/ywanglab/tflite-pi.git</code> (change the remote repo to your remote repo)</p>
 </section>
 </section>
-<section id="some-other-common-commands" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="some-other-common-commands"><span class="header-section-number">2.3</span> Some other common commands</h2>
+<section id="some-other-common-commands" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="some-other-common-commands"><span class="header-section-number">3.3</span> Some other common commands</h2>
 <ol start="6" type="1">
 <li><p>check git status: <code>git status</code></p></li>
 <li><p><code>git add filename</code> or <code>git add .</code># to add everything</p></li>
@@ -252,15 +258,15 @@ git push origin branch_name
 git config --global user.mail "your@email.com"</code></pre>
 <p>This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that <strong>you need to use the email account that you used to open your GitHub account</strong>.</p>
 </section>
-<section id="when-the-upstream-repo-changes" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="when-the-upstream-repo-changes"><span class="header-section-number">2.4</span> When the upstream repo changes</h2>
+<section id="when-the-upstream-repo-changes" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="when-the-upstream-repo-changes"><span class="header-section-number">3.4</span> When the upstream repo changes</h2>
 <p>When Git tells you the upstream repo is ahead,</p>
 <ol start="15" type="1">
 <li>Do <code>git pull</code>. Then you can commit and push a new version to the remote repo.</li>
 </ol>
 </section>
-<section id="create-branch" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="create-branch"><span class="header-section-number">2.5</span> Create branch</h2>
+<section id="create-branch" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="create-branch"><span class="header-section-number">3.5</span> Create branch</h2>
 <ol start="16" type="1">
 <li>To add a branch to the main branch <code>git branch branchname</code></li>
 </ol>
@@ -269,15 +275,15 @@ git config --global user.mail "your@email.com"</code></pre>
 <p>Then <code>add</code> the file and commit the file. To create the branch remotely we <strong>have to use</strong></p>
 <p><code>git push --set-upstream origin branchname</code></p>
 </section>
-<section id="merge-branch-to-main-branch" class="level2" data-number="2.6">
-<h2 data-number="2.6" class="anchored" data-anchor-id="merge-branch-to-main-branch"><span class="header-section-number">2.6</span> Merge branch to main branch</h2>
+<section id="merge-branch-to-main-branch" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="merge-branch-to-main-branch"><span class="header-section-number">3.6</span> Merge branch to main branch</h2>
 <p>Switch the branch again to the main using<br>
 <code>git checkout main</code></p>
 <p>on the <code>main</code> branch, Merge command to merge the branches<br>
 <code>git merge branchname</code></p>
 </section>
-<section id="collaborate-directly-by-cloning-the-authors-github-repo" class="level2" data-number="2.7">
-<h2 data-number="2.7" class="anchored" data-anchor-id="collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">2.7</span> Collaborate directly by cloning the author’s github repo</h2>
+<section id="collaborate-directly-by-cloning-the-authors-github-repo" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">3.7</span> Collaborate directly by cloning the author’s github repo</h2>
 <ol start="16" type="1">
 <li><code>git clone remote-repo</code> to a local directory</li>
 <li>create a new branch: <code>git branch [your_branch_name]</code></li>
@@ -294,8 +300,8 @@ git commit -m '[your commit message]' # Makes a git commit</code></pre>
 </ol></li>
 </ol>
 </section>
-<section id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="level2" data-number="2.8">
-<h2 data-number="2.8" class="anchored" data-anchor-id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">2.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</h2>
+<section id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">3.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</h2>
 <ol start="20" type="1">
 <li>after forking a GitHub repo to your own GitHub account, <code>git clone</code> that account to your local repo.</li>
 <li>make changes to a file, and <code>git add, commit and push</code> the changes to the remote repo in your account.</li>
@@ -541,13 +547,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      <a href="./computingEnvironment.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./summary.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

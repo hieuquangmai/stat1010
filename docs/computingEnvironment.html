@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 Lecture Notes - 1&nbsp; Introduction</title>
+<title>STAT 1010 Lecture Notes - 2&nbsp; Setting up Computing Environment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -49,8 +30,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./computingEnvironment.html" rel="next">
-<link href="./index.html" rel="prev">
+<link href="./git.html" rel="next">
+<link href="./intro.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,7 +74,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computingEnvironment.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -126,13 +107,13 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computingEnvironment.html" class="sidebar-item-text sidebar-link">
+  <a href="./computingEnvironment.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></span></a>
   </div>
 </li>
@@ -160,14 +141,25 @@ div.csl-indent {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#setting-up-python-computing-environment" id="toc-setting-up-python-computing-environment" class="nav-link active" data-scroll-target="#setting-up-python-computing-environment"><span class="header-section-number">2.1</span> Setting-up Python Computing Environment</a></li>
+  <li><a href="#setting-up-r-studio-computing-environment" id="toc-setting-up-r-studio-computing-environment" class="nav-link" data-scroll-target="#setting-up-r-studio-computing-environment"><span class="header-section-number">2.2</span> Setting-up R Studio Computing Environment</a>
+  <ul class="collapse">
+  <li><a href="#setting-up-your-own-computing-environment-on-a-personal-computer" id="toc-setting-up-your-own-computing-environment-on-a-personal-computer" class="nav-link" data-scroll-target="#setting-up-your-own-computing-environment-on-a-personal-computer"><span class="header-section-number">2.2.1</span> Setting up your own computing environment on a personal computer</a></li>
+  </ul></li>
+  <li><a href="#use-r-studio-cloud-no-setting-up-needed" id="toc-use-r-studio-cloud-no-setting-up-needed" class="nav-link" data-scroll-target="#use-r-studio-cloud-no-setting-up-needed"><span class="header-section-number">2.3</span> Use R-Studio Cloud (No setting-up needed)</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></h1>
 </div>
 
 
@@ -182,15 +174,52 @@ div.csl-indent {
 
 </header>
 
-<p>This is a book for STAT 1010: Introduction to Data Science offered at Auburn University at Montgomery.</p>
-<p>See <span class="citation" data-cites="knuth84">Knuth (<a href="references.html#ref-knuth84" role="doc-biblioref">1984</a>)</span> for additional discussion of literate programming.</p>
+<section id="setting-up-python-computing-environment" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="setting-up-python-computing-environment"><span class="header-section-number">2.1</span> Setting-up Python Computing Environment</h2>
+<ol type="1">
+<li><p><strong>Anaconda</strong>: Download anaconda and install using default installation options</p></li>
+<li><p><strong>VSC</strong>: Download VSC and install</p></li>
+<li><p>start VSC and install VSC extensions in VSC: Python, Jupyter, intellicode</p></li>
+<li><p>(optional) <strong>Quarto</strong> for authoring: Download Quarto and install</p></li>
+<li><p>Start an anaconda terminal. Navigate to the file directory.</p></li>
+<li><p>Setup a conda <strong>virtual environment</strong>: stat1010 and install python and ipykernel engines</p>
+<p><code>conda create -n stat1010 python ipykernel</code></p></li>
+<li><p>Activate the venv: <code>conda activate stat1010</code></p></li>
+<li><p>start VSC by typing <code>code .</code> in the anaconda terminal</p></li>
+<li><p>open/create a <code>.ipynb</code> or <code>.py</code> file.</p></li>
+<li><p>Select the kernel <code>stat1010</code></p></li>
+<li><p>Run a code cell by pressing <code>Shift+Enter</code> or click the triangular play button.</p></li>
+<li><p>Continue to run other cells.</p></li>
+<li><p>After finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: <code>conda deactivate</code></p></li>
+</ol>
+</section>
+<section id="setting-up-r-studio-computing-environment" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="setting-up-r-studio-computing-environment"><span class="header-section-number">2.2</span> Setting-up R Studio Computing Environment</h2>
+<section id="setting-up-your-own-computing-environment-on-a-personal-computer" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="setting-up-your-own-computing-environment-on-a-personal-computer"><span class="header-section-number">2.2.1</span> Setting up your own computing environment on a personal computer</h3>
+<p>This is the recommended way and the advantage is that it’s easy to handle files.</p>
+<ul>
+<li><p>Go to the website &lt;https://posit.co/download/rstudio-desktop/&gt;.</p></li>
+<li><p>Follow the two steps:</p>
+<ol type="1">
+<li><p>download and install R: Choose the appropriate operating system, and then choose “base” to “install R for the first time”. You can simply accept all default options.</p></li>
+<li><p>download Rstudio Desktop and Install it.</p></li>
+</ol></li>
+</ul>
+<p>After installation, start R-Studio, and you are ready to use it.</p>
+</section>
+</section>
+<section id="use-r-studio-cloud-no-setting-up-needed" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="use-r-studio-cloud-no-setting-up-needed"><span class="header-section-number">2.3</span> Use R-Studio Cloud (No setting-up needed)</h2>
+<p>Alternatively, one can save the hassle of setting up on a personal computer and use the R-Studio Cloud for <strong>free</strong>. Here are the steps:</p>
+<ul>
+<li><p>Go to the website <a href="https://login.rstudio.cloud" class="uri">https://login.rstudio.cloud</a>.</p></li>
+<li><p>Either create a new account using an email address such as your AUM email or simply “Log in using Google” or click on other log-in alternative.</p></li>
+</ul>
+<p>After log-in to your account, you are ready to use R Studio.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
-<div id="ref-knuth84" class="csl-entry" role="listitem">
-Knuth, Donald E. 1984. <span>“Literate Programming.”</span> <em>Comput. J.</em> 27 (2): 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>.
-</div>
-</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -428,13 +457,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      <a href="./intro.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./computingEnvironment.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./git.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Use Git and GitHub</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

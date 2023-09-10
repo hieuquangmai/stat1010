@@ -1,0 +1,61 @@
+---
+title: "Setting up Computing Environment"
+format: html
+editor: visual
+---
+
+## Setting-up Python Computing Environment
+
+1.  **Anaconda**: Download anaconda and install using default installation options
+
+2.  **VSC**: Download VSC and install
+
+3.  start VSC and install VSC extensions in VSC: Python, Jupyter, intellicode
+
+4.  (optional) **Quarto** for authoring: Download Quarto and install
+
+5.  Start an anaconda terminal. Navigate to the file directory.
+
+6.  Setup a conda **virtual environment**: stat1010 and install python and ipykernel engines
+
+    `conda create -n stat1010 python ipykernel`
+
+7.  Activate the venv: `conda activate stat1010`
+
+8.  start VSC by typing `code .` in the anaconda terminal
+
+9.  open/create a `.ipynb` or `.py` file.
+
+10. Select the kernel `stat1010`
+
+11. Run a code cell by pressing `Shift+Enter` or click the triangular play button.
+
+12. Continue to run other cells.
+
+13. After finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: `conda deactivate`
+
+## Setting-up R Studio Computing Environment
+
+### Setting up your own computing environment on a personal computer
+
+This is the recommended way and the advantage is that it's easy to handle files.
+
+-   Go to the website \<https://posit.co/download/rstudio-desktop/\>.
+
+-   Follow the two steps:
+
+    1.  download and install R: Choose the appropriate operating system, and then choose "base" to "install R for the first time". You can simply accept all default options.
+
+    2.  download Rstudio Desktop and Install it.
+
+After installation, start R-Studio, and you are ready to use it.
+
+## Use R-Studio Cloud (No setting-up needed)
+
+Alternatively, one can save the hassle of setting up on a personal computer and use the R-Studio Cloud for **free**. Here are the steps:
+
+-   Go to the website <https://login.rstudio.cloud>.
+
+-   Either create a new account using an email address such as your AUM email or simply "Log in using Google" or click on other log-in alternative.
+
+After log-in to your account, you are ready to use R Studio.
