@@ -98,9 +98,16 @@
     "text": "4.8 Collaborate by fork a GitHub repo and commit the fork repo and create a pull request\n\nafter forking a GitHub repo to your own GitHub account, git clone that account to your local repo.\nmake changes to a file, and git add, commit and push the changes to the remote repo in your account.\nThen go to your remote repo on the GitHub site and Create pull request."
   },
   {
+    "objectID": "1_lab_markdown.html",
+    "href": "1_lab_markdown.html",
+    "title": "5  My Jupyter Notebook",
+    "section": "",
+    "text": "Yi Wang (boldfaced using ** **)\nEducator\nThe following line is italicized using * *\nI am interest in data science because it is a discipline that I feel love with.\n\n5.0.1 Perform addtion\n\n# code block\n1+1\n\n2\n\n\n\n\n5.0.2 Horizontal Rule\nThree or more\nfirst rule using ***\n\nusing dashes —\n\nUsing (underscores) ___\n\n\n\n5.0.3 Bulet list\nusing *\n\nBird\nFrog\nCat\nDog\n\n\n\n5.0.4 Numbered list\nusing 1. item (there is a space between 1. and item)\n\nApple\nPear\nPeach\n\n\n\n5.0.5 Tables\n\n\n\nleft-aligned\ncentered\nright-aligned\n\n\n\n\n1/2/2020\nMary\nApple\n\n\n1/3\nJohnason\nTomato\n\n\n\n\n\n5.0.6 Hyperlinks\nClick here to access my github account.\n\n\n5.0.7 Images\n\n\n\nA computer monitor\n\n\n\n\n5.0.8 Code/Syntax highlighting\ns = \"Python syntax highlighting\"\nprint s\n\n\n5.0.9 Blocked quotes\nusing &gt;\n\nBlockquotes are very handy in email to emulate reply text.\n\n\nThis line is part of the same quote.\n\n\n\n5.0.10 Strikethrough\nusing ~~ before and after a phrase\nstrikethrough this"
+  },
+  {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "5  Summary",
+    "title": "6  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
   }

@@ -12,6 +12,7 @@ book:
     - python_comp_env.qmd
     - r_comp_env.qmd
     - git.qmd
+    - 1_lab_markdown.ipynb
     - summary.qmd
     - references.qmd
 
