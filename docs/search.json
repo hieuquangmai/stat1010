@@ -28,11 +28,18 @@
     "text": "2.2 On your own computer\n\nAnaconda: Download anaconda and install using default installation options\nVSC: Download VSC and install\nstart VSC and install VSC extensions in VSC: Python, Jupyter, intellicode\n(optional) Quarto for authoring: Download Quarto and install\nStart an anaconda terminal. Navigate to the file directory.\nSetup a conda virtual environment: stat1010 and install python and ipykernel engines\nconda create -n stat1010 python ipykernel\nActivate the venv: conda activate stat1010\nstart VSC by typing code . in the anaconda terminal\nopen/create a .ipynb or .py file.\nSelect the kernel stat1010\nRun a code cell by pressing Shift+Enter or click the triangular play button.\nContinue to run other cells.\nAfter finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: conda deactivate"
   },
   {
+    "objectID": "r_comp_env.html#setting-up-your-own-computing-environment-on-a-personal-computer",
+    "href": "r_comp_env.html#setting-up-your-own-computing-environment-on-a-personal-computer",
+    "title": "3  Setting-up R Studio Computing Environment",
+    "section": "3.1 Setting up your own computing environment on a personal computer",
+    "text": "3.1 Setting up your own computing environment on a personal computer\nThis is the recommended way and the advantage is that it’s easy to handle files.\n\nGo to the website &lt;https://posit.co/download/rstudio-desktop/&gt;.\nFollow the two steps:\n\ndownload and install R: Choose the appropriate operating system, and then choose “base” to “install R for the first time”. You can simply accept all default options.\ndownload Rstudio Desktop and Install it.\n\n\nAfter installation, start R-Studio, and you are ready to use it."
+  },
+  {
     "objectID": "r_comp_env.html#use-r-studio-cloud-no-setting-up-needed",
     "href": "r_comp_env.html#use-r-studio-cloud-no-setting-up-needed",
     "title": "3  Setting-up R Studio Computing Environment",
-    "section": "3.1 Use R-Studio Cloud (No setting-up needed)",
-    "text": "3.1 Use R-Studio Cloud (No setting-up needed)\nAlternatively, one can save the hassle of setting up on a personal computer and use the R-Studio Cloud for free. Here are the steps:\n\nGo to the website https://login.rstudio.cloud.\nEither create a new account using an email address such as your AUM email or simply “Log in using Google” or click on other log-in alternative.\n\nAfter log-in to your account, you are ready to use R Studio."
+    "section": "3.2 Use R-Studio Cloud (No setting-up needed)",
+    "text": "3.2 Use R-Studio Cloud (No setting-up needed)\nAlternatively, one can save the hassle of setting up on a personal computer and use the R-Studio Cloud for free. Here are the steps:\n\nGo to the website https://login.rstudio.cloud.\nEither create a new account using an email address such as your AUM email or simply “Log in using Google” or click on other log-in alternative.\n\nAfter log-in to your account, you are ready to use R Studio."
   },
   {
     "objectID": "git.html#download-git",

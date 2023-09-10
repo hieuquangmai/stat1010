@@ -6,7 +6,7 @@ editor: visual
 
 # Setting-up R Studio Computing Environment
 
-### Setting up your own computing environment on a personal computer
+## Setting up your own computing environment on a personal computer
 
 This is the recommended way and the advantage is that it's easy to handle files.
 
