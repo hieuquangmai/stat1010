@@ -10,8 +10,8 @@ editor: visual
 
 All you need is a Google account. Sign in your Google account in a browser, and navigate to Google Colab. Google Colab supports both `Python` and `R`. `Python` is the default engine. Change the engine to `R` in `Connect`-\>`change runtime type`. Then you are all set. Your file will be saved to your Google Drive or you can choose to send it to your `GitHub` account (recommended).
 
-\
-\## On your own computer
+
+## On your own computer
 
 1.  **Anaconda**: Download anaconda and install using default installation options
 
@@ -41,4 +41,4 @@ All you need is a Google account. Sign in your Google account in a browser, and 
 
 13. After finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: `conda deactivate`
 
-## 
+

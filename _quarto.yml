@@ -10,6 +10,7 @@ book:
     - index.qmd
     - intro.qmd
     - python_comp_env.qmd
+    - r_comp_env.qmd
     - git.qmd
     - summary.qmd
     - references.qmd

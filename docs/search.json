@@ -18,75 +18,82 @@
     "href": "python_comp_env.html#use-google-colab",
     "title": "2  Setting-up Python Computing Environment",
     "section": "2.1 Use Google Colab",
-    "text": "2.1 Use Google Colab\nAll you need is a Google account. Sign in your Google account in a browser, and navigate to Google Colab. Google Colab supports both Python and R. Python is the default engine. Change the engine to R in Connect-&gt;change runtime type. Then you are all set. Your file will be saved to your Google Drive or you can choose to send it to your GitHub account (recommended).\n\n## On your own computer\n\nAnaconda: Download anaconda and install using default installation options\nVSC: Download VSC and install\nstart VSC and install VSC extensions in VSC: Python, Jupyter, intellicode\n(optional) Quarto for authoring: Download Quarto and install\nStart an anaconda terminal. Navigate to the file directory.\nSetup a conda virtual environment: stat1010 and install python and ipykernel engines\nconda create -n stat1010 python ipykernel\nActivate the venv: conda activate stat1010\nstart VSC by typing code . in the anaconda terminal\nopen/create a .ipynb or .py file.\nSelect the kernel stat1010\nRun a code cell by pressing Shift+Enter or click the triangular play button.\nContinue to run other cells.\nAfter finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: conda deactivate"
+    "text": "2.1 Use Google Colab\nAll you need is a Google account. Sign in your Google account in a browser, and navigate to Google Colab. Google Colab supports both Python and R. Python is the default engine. Change the engine to R in Connect-&gt;change runtime type. Then you are all set. Your file will be saved to your Google Drive or you can choose to send it to your GitHub account (recommended)."
   },
   {
-    "objectID": "python_comp_env.html#section",
-    "href": "python_comp_env.html#section",
+    "objectID": "python_comp_env.html#on-your-own-computer",
+    "href": "python_comp_env.html#on-your-own-computer",
     "title": "2  Setting-up Python Computing Environment",
-    "section": "2.2 ",
-    "text": "2.2"
+    "section": "2.2 On your own computer",
+    "text": "2.2 On your own computer\n\nAnaconda: Download anaconda and install using default installation options\nVSC: Download VSC and install\nstart VSC and install VSC extensions in VSC: Python, Jupyter, intellicode\n(optional) Quarto for authoring: Download Quarto and install\nStart an anaconda terminal. Navigate to the file directory.\nSetup a conda virtual environment: stat1010 and install python and ipykernel engines\nconda create -n stat1010 python ipykernel\nActivate the venv: conda activate stat1010\nstart VSC by typing code . in the anaconda terminal\nopen/create a .ipynb or .py file.\nSelect the kernel stat1010\nRun a code cell by pressing Shift+Enter or click the triangular play button.\nContinue to run other cells.\nAfter finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: conda deactivate"
+  },
+  {
+    "objectID": "r_comp_env.html#use-r-studio-cloud-no-setting-up-needed",
+    "href": "r_comp_env.html#use-r-studio-cloud-no-setting-up-needed",
+    "title": "3  Setting-up R Studio Computing Environment",
+    "section": "3.1 Use R-Studio Cloud (No setting-up needed)",
+    "text": "3.1 Use R-Studio Cloud (No setting-up needed)\nAlternatively, one can save the hassle of setting up on a personal computer and use the R-Studio Cloud for free. Here are the steps:\n\nGo to the website https://login.rstudio.cloud.\nEither create a new account using an email address such as your AUM email or simply “Log in using Google” or click on other log-in alternative.\n\nAfter log-in to your account, you are ready to use R Studio."
   },
   {
     "objectID": "git.html#download-git",
     "href": "git.html#download-git",
-    "title": "3  Use Git and GitHub",
-    "section": "3.1 Download Git",
-    "text": "3.1 Download Git\n\nGo to the website https://git-scm.com/downloads, select an appropriate operating system, select “Click here to download”\nRun the downloaded setup file with a name such as Git-2.42.0.2-64-bit.exe, and accept all default options."
+    "title": "4  Use Git and GitHub",
+    "section": "4.1 Download Git",
+    "text": "4.1 Download Git\n\nGo to the website https://git-scm.com/downloads, select an appropriate operating system, select “Click here to download”\nRun the downloaded setup file with a name such as Git-2.42.0.2-64-bit.exe, and accept all default options."
   },
   {
     "objectID": "git.html#establish-a-connection-between-a-local-repo-and-a-remote-github-repo",
     "href": "git.html#establish-a-connection-between-a-local-repo-and-a-remote-github-repo",
-    "title": "3  Use Git and GitHub",
-    "section": "3.2 Establish a connection between a local repo and a remote GitHub repo",
-    "text": "3.2 Establish a connection between a local repo and a remote GitHub repo\n\n3.2.1 Create your own\n\nSign in to your github account.\nCreate a GitHub empty repo (such as named homework0) on GitHub (https://github.com) but make sure it is empty (do not add Readme.md file)\nStart a Git Bash Terminal window on your local computer (You could also use the Terminal Window in RStudio or VSC). Navigate to the project directory; if you haven’t yet created a project directory such as homework0, do\nmkdir project_dir Example: mkdir homework0\nUse cd project_directory_name to enter your local project directory;\ncd .. # back to the dir of the parent level of the current dir\nuse ls to list all files and directories or use ls -al to include all hidden files and directories. In your local Git Terminal, (note at this moment your local project directory is empty)\necho \"# homework0\" &gt;&gt; README.md  #create a file README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main #rename the branch name to main\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit push -u origin main\nif your local project directory already 1) contains files and 2) had performed init git before, then\ngit remote add origin https://github.com/ywanglab/homework0.git` #(change the remote to your remote repo)\ngit branch -M main\ngit push -u origin main\nin the pop-out GitHub Sign in window, click on Sign in with your browser.\n\n\n\n3.2.2 Clone an existing GitHub account\nThis is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.\ngit clone https://github.com/ywanglab/tflite-pi.git (change the remote repo to your remote repo)"
+    "title": "4  Use Git and GitHub",
+    "section": "4.2 Establish a connection between a local repo and a remote GitHub repo",
+    "text": "4.2 Establish a connection between a local repo and a remote GitHub repo\n\n4.2.1 Create your own\n\nSign in to your github account.\nCreate a GitHub empty repo (such as named homework0) on GitHub (https://github.com) but make sure it is empty (do not add Readme.md file)\nStart a Git Bash Terminal window on your local computer (You could also use the Terminal Window in RStudio or VSC). Navigate to the project directory; if you haven’t yet created a project directory such as homework0, do\nmkdir project_dir Example: mkdir homework0\nUse cd project_directory_name to enter your local project directory;\ncd .. # back to the dir of the parent level of the current dir\nuse ls to list all files and directories or use ls -al to include all hidden files and directories. In your local Git Terminal, (note at this moment your local project directory is empty)\necho \"# homework0\" &gt;&gt; README.md  #create a file README.md\ngit init\ngit add README.md\ngit commit -m \"first commit\"\ngit branch -M main #rename the branch name to main\ngit remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)\ngit push -u origin main\nif your local project directory already 1) contains files and 2) had performed init git before, then\ngit remote add origin https://github.com/ywanglab/homework0.git` #(change the remote to your remote repo)\ngit branch -M main\ngit push -u origin main\nin the pop-out GitHub Sign in window, click on Sign in with your browser.\n\n\n\n4.2.2 Clone an existing GitHub account\nThis is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.\ngit clone https://github.com/ywanglab/tflite-pi.git (change the remote repo to your remote repo)"
   },
   {
     "objectID": "git.html#some-other-common-commands",
     "href": "git.html#some-other-common-commands",
-    "title": "3  Use Git and GitHub",
-    "section": "3.3 Some other common commands",
-    "text": "3.3 Some other common commands\n\ncheck git status: git status\ngit add filename or git add .# to add everything\nuse git log to check all commits. Use git log --pretty=oneline for shorter display.\nuse git checkout . to revert back to previous commit. Any changes after the previous commit will be abandoned.\nto get to a previous commit, use git checkout six_character_commit_ID. To get back to main, use git checkout main.\nTo permanently go back to a previous commit, use\ngit reset –hard six_char_commit_ID\ngit remote -v Get the reminder of the remote repo\nif you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:\n\n```         \ngit rm -rf --cached file1.txt # otherwise, remove --cached\ngit commit -m \"remove file1.txt\" \n\n```\n\nAnd to push changes to remote repo\n\n```         \ngit push origin branch_name\n```\n\nyou might need to tell GitHub who you are. To to this type the following two commands in your terminal window:\n\ngit config --global user.name \"Your Name\" \ngit config --global user.mail \"your@email.com\"\nThis will change the Git configuration in a way that anytime you use Git, it will know this information. Note that you need to use the email account that you used to open your GitHub account."
+    "title": "4  Use Git and GitHub",
+    "section": "4.3 Some other common commands",
+    "text": "4.3 Some other common commands\n\ncheck git status: git status\ngit add filename or git add .# to add everything\nuse git log to check all commits. Use git log --pretty=oneline for shorter display.\nuse git checkout . to revert back to previous commit. Any changes after the previous commit will be abandoned.\nto get to a previous commit, use git checkout six_character_commit_ID. To get back to main, use git checkout main.\nTo permanently go back to a previous commit, use\ngit reset –hard six_char_commit_ID\ngit remote -v Get the reminder of the remote repo\nif you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:\n\n```         \ngit rm -rf --cached file1.txt # otherwise, remove --cached\ngit commit -m \"remove file1.txt\" \n\n```\n\nAnd to push changes to remote repo\n\n```         \ngit push origin branch_name\n```\n\nyou might need to tell GitHub who you are. To to this type the following two commands in your terminal window:\n\ngit config --global user.name \"Your Name\" \ngit config --global user.mail \"your@email.com\"\nThis will change the Git configuration in a way that anytime you use Git, it will know this information. Note that you need to use the email account that you used to open your GitHub account."
   },
   {
     "objectID": "git.html#when-the-upstream-repo-changes",
     "href": "git.html#when-the-upstream-repo-changes",
-    "title": "3  Use Git and GitHub",
-    "section": "3.4 When the upstream repo changes",
-    "text": "3.4 When the upstream repo changes\nWhen Git tells you the upstream repo is ahead,\n\nDo git pull. Then you can commit and push a new version to the remote repo."
+    "title": "4  Use Git and GitHub",
+    "section": "4.4 When the upstream repo changes",
+    "text": "4.4 When the upstream repo changes\nWhen Git tells you the upstream repo is ahead,\n\nDo git pull. Then you can commit and push a new version to the remote repo."
   },
   {
     "objectID": "git.html#create-branch",
     "href": "git.html#create-branch",
-    "title": "3  Use Git and GitHub",
-    "section": "3.5 Create branch",
-    "text": "3.5 Create branch\n\nTo add a branch to the main branch git branch branchname\n\nSwitch the branch git checkout branchname\nAdding a file in branch echo \"#content\" &gt;&gt; filename.txt\nThen add the file and commit the file. To create the branch remotely we have to use\ngit push --set-upstream origin branchname"
+    "title": "4  Use Git and GitHub",
+    "section": "4.5 Create branch",
+    "text": "4.5 Create branch\n\nTo add a branch to the main branch git branch branchname\n\nSwitch the branch git checkout branchname\nAdding a file in branch echo \"#content\" &gt;&gt; filename.txt\nThen add the file and commit the file. To create the branch remotely we have to use\ngit push --set-upstream origin branchname"
   },
   {
     "objectID": "git.html#merge-branch-to-main-branch",
     "href": "git.html#merge-branch-to-main-branch",
-    "title": "3  Use Git and GitHub",
-    "section": "3.6 Merge branch to main branch",
-    "text": "3.6 Merge branch to main branch\nSwitch the branch again to the main using\ngit checkout main\non the main branch, Merge command to merge the branches\ngit merge branchname"
+    "title": "4  Use Git and GitHub",
+    "section": "4.6 Merge branch to main branch",
+    "text": "4.6 Merge branch to main branch\nSwitch the branch again to the main using\ngit checkout main\non the main branch, Merge command to merge the branches\ngit merge branchname"
   },
   {
     "objectID": "git.html#collaborate-directly-by-cloning-the-authors-github-repo",
     "href": "git.html#collaborate-directly-by-cloning-the-authors-github-repo",
-    "title": "3  Use Git and GitHub",
-    "section": "3.7 Collaborate directly by cloning the author’s github repo",
-    "text": "3.7 Collaborate directly by cloning the author’s github repo\n\ngit clone remote-repo to a local directory\ncreate a new branch: git branch [your_branch_name]\ngit checkout [your_branch_name]\nSubmitting your changes for review\n\nCommit your changes locally. Once you are ready to submit your changes, run these commands in your terminal:\ngit add -A                            # Stages all changes \ngit status                            # Lists all staged changes \ngit commit -m '[your commit message]' # Makes a git commit\nMake a pull request. A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:\ngit push origin HEAD # Push current branch to the same branch on GitHub\nNow, open the remote GitHub repo such as: https://github.com/ywanglab/textbook in your browser. You should see a green button titled “Compare & pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button."
+    "title": "4  Use Git and GitHub",
+    "section": "4.7 Collaborate directly by cloning the author’s github repo",
+    "text": "4.7 Collaborate directly by cloning the author’s github repo\n\ngit clone remote-repo to a local directory\ncreate a new branch: git branch [your_branch_name]\ngit checkout [your_branch_name]\nSubmitting your changes for review\n\nCommit your changes locally. Once you are ready to submit your changes, run these commands in your terminal:\ngit add -A                            # Stages all changes \ngit status                            # Lists all staged changes \ngit commit -m '[your commit message]' # Makes a git commit\nMake a pull request. A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:\ngit push origin HEAD # Push current branch to the same branch on GitHub\nNow, open the remote GitHub repo such as: https://github.com/ywanglab/textbook in your browser. You should see a green button titled “Compare & pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button."
   },
   {
     "objectID": "git.html#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request",
     "href": "git.html#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request",
-    "title": "3  Use Git and GitHub",
-    "section": "3.8 Collaborate by fork a GitHub repo and commit the fork repo and create a pull request",
-    "text": "3.8 Collaborate by fork a GitHub repo and commit the fork repo and create a pull request\n\nafter forking a GitHub repo to your own GitHub account, git clone that account to your local repo.\nmake changes to a file, and git add, commit and push the changes to the remote repo in your account.\nThen go to your remote repo on the GitHub site and Create pull request."
+    "title": "4  Use Git and GitHub",
+    "section": "4.8 Collaborate by fork a GitHub repo and commit the fork repo and create a pull request",
+    "text": "4.8 Collaborate by fork a GitHub repo and commit the fork repo and create a pull request\n\nafter forking a GitHub repo to your own GitHub account, git clone that account to your local repo.\nmake changes to a file, and git add, commit and push the changes to the remote repo in your account.\nThen go to your remote repo on the GitHub site and Create pull request."
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "4  Summary",
+    "title": "5  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever."
   }
