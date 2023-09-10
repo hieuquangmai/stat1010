@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>STAT 1010 Lecture Notes - 2&nbsp; Setting up Computing Environment</title>
+<title>STAT 1010 Lecture Notes - 2&nbsp; Setting-up Python Computing Environment</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -74,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./computingEnvironment.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./python_comp_env.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up Python Computing Environment</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -113,8 +113,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./computingEnvironment.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></span></a>
+  <a href="./python_comp_env.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up Python Computing Environment</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -145,12 +145,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#setting-up-python-computing-environment" id="toc-setting-up-python-computing-environment" class="nav-link active" data-scroll-target="#setting-up-python-computing-environment"><span class="header-section-number">2.1</span> Setting-up Python Computing Environment</a></li>
-  <li><a href="#setting-up-r-studio-computing-environment" id="toc-setting-up-r-studio-computing-environment" class="nav-link" data-scroll-target="#setting-up-r-studio-computing-environment"><span class="header-section-number">2.2</span> Setting-up R Studio Computing Environment</a>
-  <ul class="collapse">
-  <li><a href="#setting-up-your-own-computing-environment-on-a-personal-computer" id="toc-setting-up-your-own-computing-environment-on-a-personal-computer" class="nav-link" data-scroll-target="#setting-up-your-own-computing-environment-on-a-personal-computer"><span class="header-section-number">2.2.1</span> Setting up your own computing environment on a personal computer</a></li>
-  </ul></li>
-  <li><a href="#use-r-studio-cloud-no-setting-up-needed" id="toc-use-r-studio-cloud-no-setting-up-needed" class="nav-link" data-scroll-target="#use-r-studio-cloud-no-setting-up-needed"><span class="header-section-number">2.3</span> Use R-Studio Cloud (No setting-up needed)</a></li>
+  <li><a href="#use-google-colab" id="toc-use-google-colab" class="nav-link active" data-scroll-target="#use-google-colab"><span class="header-section-number">2.1</span> Use Google Colab</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">2.2</span> </a></li>
   </ul>
 </nav>
     </div>
@@ -159,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting up Computing Environment</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Setting-up Python Computing Environment</span></h1>
 </div>
 
 
@@ -174,8 +170,11 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="setting-up-python-computing-environment" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="setting-up-python-computing-environment"><span class="header-section-number">2.1</span> Setting-up Python Computing Environment</h2>
+<section id="use-google-colab" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="use-google-colab"><span class="header-section-number">2.1</span> Use Google Colab</h2>
+<p>All you need is a Google account. Sign in your Google account in a browser, and navigate to Google Colab. Google Colab supports both <code>Python</code> and <code>R</code>. <code>Python</code> is the default engine. Change the engine to <code>R</code> in <code>Connect</code>-&gt;<code>change runtime type</code>. Then you are all set. Your file will be saved to your Google Drive or you can choose to send it to your <code>GitHub</code> account (recommended).</p>
+<p><br>
+## On your own computer</p>
 <ol type="1">
 <li><p><strong>Anaconda</strong>: Download anaconda and install using default installation options</p></li>
 <li><p><strong>VSC</strong>: Download VSC and install</p></li>
@@ -193,30 +192,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>After finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: <code>conda deactivate</code></p></li>
 </ol>
 </section>
-<section id="setting-up-r-studio-computing-environment" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="setting-up-r-studio-computing-environment"><span class="header-section-number">2.2</span> Setting-up R Studio Computing Environment</h2>
-<section id="setting-up-your-own-computing-environment-on-a-personal-computer" class="level3" data-number="2.2.1">
-<h3 data-number="2.2.1" class="anchored" data-anchor-id="setting-up-your-own-computing-environment-on-a-personal-computer"><span class="header-section-number">2.2.1</span> Setting up your own computing environment on a personal computer</h3>
-<p>This is the recommended way and the advantage is that it’s easy to handle files.</p>
-<ul>
-<li><p>Go to the website &lt;https://posit.co/download/rstudio-desktop/&gt;.</p></li>
-<li><p>Follow the two steps:</p>
-<ol type="1">
-<li><p>download and install R: Choose the appropriate operating system, and then choose “base” to “install R for the first time”. You can simply accept all default options.</p></li>
-<li><p>download Rstudio Desktop and Install it.</p></li>
-</ol></li>
-</ul>
-<p>After installation, start R-Studio, and you are ready to use it.</p>
-</section>
-</section>
-<section id="use-r-studio-cloud-no-setting-up-needed" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="use-r-studio-cloud-no-setting-up-needed"><span class="header-section-number">2.3</span> Use R-Studio Cloud (No setting-up needed)</h2>
-<p>Alternatively, one can save the hassle of setting up on a personal computer and use the R-Studio Cloud for <strong>free</strong>. Here are the steps:</p>
-<ul>
-<li><p>Go to the website <a href="https://login.rstudio.cloud" class="uri">https://login.rstudio.cloud</a>.</p></li>
-<li><p>Either create a new account using an email address such as your AUM email or simply “Log in using Google” or click on other log-in alternative.</p></li>
-</ul>
-<p>After log-in to your account, you are ready to use R Studio.</p>
+<section id="section" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="section"><span class="header-section-number">2.2</span> </h2>
 
 
 </section>

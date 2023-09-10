@@ -9,7 +9,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - computingEnvironment.qmd
+    - python_comp_env.qmd
     - git.qmd
     - summary.qmd
     - references.qmd
