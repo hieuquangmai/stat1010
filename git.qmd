@@ -17,9 +17,39 @@ I assume you already have an account on <https://github.com>. If not, you need t
 
 ## Establish a connection between a local repo and a remote GitHub repo
 
-### Create your own
+### Clone an existing GitHub account
 
-3.  Sign in to your github account.
+This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.
+
+1.  Sign in to your GitHub account, and create a GitHub repo (such as named `homework0`) on `GitHub` (<https://github.com>), you can add a README.md file or just choose not to add a README.md file.
+
+2.  On your local computer, open a `Git Bash` terminal. In the terminal, type `mkdir homework0` (create a folder named `homework0` within the current directory and then `cd homework0` (enter the directory `homework0`). The directory name `homework0` can be any name you want.
+
+3.  `git clone https://github.com/YourGitHubUserName/homework0.git` (change the remote repo to your remote repo)
+
+4.  Now you have established a connection between your local directory `homework0` and the remote repo `homework0` on GitHub.
+
+5.  Create a new file in the current local directory `homework0` on your local computer, such as using your favorite editor to create a file named `myfirstlocalfile.txt` with any content in it. Or for the sake of demonstration, you can use the following Linux command to create this file containing the line `#My first local file`.
+
+    `echo "#My first local file" >> myfirstlocalfile.txt`
+
+6.  In the terminal, `git add .` This will add all changes to the **staging area**.
+
+7.  Now you are ready to **commit** the changes, which versions the current files in the directory.
+
+    `git commit -m "my first commit from local"`
+
+8.  Now you are ready to sync with the remote repo.
+
+    `git push`
+
+    The GitHub might ask you to sign in for the first time. Choose `Sign in with your brower` to sign in to complete it.
+
+### Initializing a Git Directory Locally First
+
+The previous approach initializes a local Git repo by cloning a remote repo. You can also initializing a local Git repo by using `git init`. Follow the following steps:
+
+3.  Sign in to your GitHub account.
 
 4.  Create a GitHub **empty** repo (such as named `homework0`) on `GitHub` (<https://github.com>) but make sure it is empty (do not add Readme.md file)
 
@@ -29,16 +59,14 @@ I assume you already have an account on <https://github.com>. If not, you need t
 
     Use `cd project_directory_name` to enter your local project directory;
 
-    `cd ..` \# back to the dir of the parent level of the current dir
-
-    use `ls` to list all files and directories or use `ls -al` to include all hidden files and directories. In your local Git Terminal, (note at this moment your local project directory is empty)
+    Use `ls` to list all files and directories or use `ls -al` to include all hidden files and directories. In your local Git Terminal, (note at this moment your local project directory is empty)
 
     ```         
     echo "# homework0" >> README.md  #create a file README.md
     git init
-    git add README.md
-    git commit -m "first commit"
     git branch -M main #rename the branch name to main
+    git add .
+    git commit -m "first commit"
     git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
     git push -u origin main
     ```
@@ -51,13 +79,7 @@ I assume you already have an account on <https://github.com>. If not, you need t
     git push -u origin main
     ```
 
-6.  in the pop-out `GitHub Sign in` window, click on `Sign in with your browser`.
-
-### Clone an existing GitHub account
-
-This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.
-
-`git clone https://github.com/ywanglab/tflite-pi.git` (change the remote repo to your remote repo)
+6.  in the pop-out `GitHub Sign-in` window, click on `Sign in with your browser`.
 
 ## Some other common commands
 
@@ -67,7 +89,7 @@ This is an easier way to establish a connection between a local repo and a remot
 
 8.  use `git log` to check all commits. Use `git log --pretty=oneline` for shorter display.
 
-9.  use `git checkout .` to revert back to previous commit. Any changes after the previous commit will be abandoned.
+9.  use `git checkout .` to revert back to the previous commit. Any changes after the previous commit will be abandoned.
 
 10. to get to a previous commit, use `git checkout six_character_commit_ID`. To get back to main, use `git checkout main`.
 
@@ -79,21 +101,18 @@ This is an easier way to establish a connection between a local repo and a remot
 
 13. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
 
-````         
 ```         
 git rm -rf --cached file1.txt # otherwise, remove --cached
 git commit -m "remove file1.txt" 
-
 ```
 
 And to push changes to remote repo
 
 ```         
-git push origin branch_name
+git push origin main
 ```
-````
 
-14. you might need to tell GitHub who you are. To to this type the following two commands in your terminal window:
+14. For some operating system, such as Mac or Linux, you might be asked to tell GitHub who you are. When you are prompted, type the following two commands in your terminal window:
 
 ```         
 git config --global user.name "Your Name" 
@@ -122,7 +141,7 @@ Then `add` the file and commit the file. To create the branch remotely we **have
 
 ## Merge branch to main branch
 
-Switch the branch again to the main using\
+Switch from a branch (with name such as `branchname` to the `main` using\
 `git checkout main`
 
 on the `main` branch, Merge command to merge the branches\
@@ -148,7 +167,7 @@ on the `main` branch, Merge command to merge the branches\
         git push origin HEAD # Push current branch to the same branch on GitHub
         ```
 
-        Now, open the remote GitHub repo such as: [https://github.com/ywanglab/textbook](https://github.com/DS-100/textbook) in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
+        Now, open the remote GitHub repo that you cloned such as: [https://github.com/ywanglab/textbook](https://github.com/DS-100/textbook) in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
 
 ## Collaborate by fork a GitHub repo and commit the fork repo and create a pull request
 

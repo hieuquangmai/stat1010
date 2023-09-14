@@ -161,8 +161,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#download-git" id="toc-download-git" class="nav-link active" data-scroll-target="#download-git"><span class="header-section-number">4.1</span> Download Git</a></li>
   <li><a href="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo" id="toc-establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="nav-link" data-scroll-target="#establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">4.2</span> Establish a connection between a local repo and a remote GitHub repo</a>
   <ul class="collapse">
-  <li><a href="#create-your-own" id="toc-create-your-own" class="nav-link" data-scroll-target="#create-your-own"><span class="header-section-number">4.2.1</span> Create your own</a></li>
-  <li><a href="#clone-an-existing-github-account" id="toc-clone-an-existing-github-account" class="nav-link" data-scroll-target="#clone-an-existing-github-account"><span class="header-section-number">4.2.2</span> Clone an existing GitHub account</a></li>
+  <li><a href="#clone-an-existing-github-account" id="toc-clone-an-existing-github-account" class="nav-link" data-scroll-target="#clone-an-existing-github-account"><span class="header-section-number">4.2.1</span> Clone an existing GitHub account</a></li>
+  <li><a href="#initializing-a-git-directory-locally-first" id="toc-initializing-a-git-directory-locally-first" class="nav-link" data-scroll-target="#initializing-a-git-directory-locally-first"><span class="header-section-number">4.2.2</span> Initializing a Git Directory Locally First</a></li>
   </ul></li>
   <li><a href="#some-other-common-commands" id="toc-some-other-common-commands" class="nav-link" data-scroll-target="#some-other-common-commands"><span class="header-section-number">4.3</span> Some other common commands</a></li>
   <li><a href="#when-the-upstream-repo-changes" id="toc-when-the-upstream-repo-changes" class="nav-link" data-scroll-target="#when-the-upstream-repo-changes"><span class="header-section-number">4.4</span> When the upstream repo changes</a></li>
@@ -209,34 +209,47 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="establish-a-connection-between-a-local-repo-and-a-remote-github-repo"><span class="header-section-number">4.2</span> Establish a connection between a local repo and a remote GitHub repo</h2>
-<section id="create-your-own" class="level3" data-number="4.2.1">
-<h3 data-number="4.2.1" class="anchored" data-anchor-id="create-your-own"><span class="header-section-number">4.2.1</span> Create your own</h3>
+<section id="clone-an-existing-github-account" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="clone-an-existing-github-account"><span class="header-section-number">4.2.1</span> Clone an existing GitHub account</h3>
+<p>This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.</p>
+<ol type="1">
+<li><p>Sign in to your GitHub account, and create a GitHub repo (such as named <code>homework0</code>) on <code>GitHub</code> (<a href="https://github.com" class="uri">https://github.com</a>), you can add a README.md file or just choose not to add a README.md file.</p></li>
+<li><p>On your local computer, open a <code>Git Bash</code> terminal. In the terminal, type <code>mkdir homework0</code> (create a folder named <code>homework0</code> within the current directory and then <code>cd homework0</code> (enter the directory <code>homework0</code>). The directory name <code>homework0</code> can be any name you want.</p></li>
+<li><p><code>git clone https://github.com/YourGitHubUserName/homework0.git</code> (change the remote repo to your remote repo)</p></li>
+<li><p>Now you have established a connection between your local directory <code>homework0</code> and the remote repo <code>homework0</code> on GitHub.</p></li>
+<li><p>Create a new file in the current local directory <code>homework0</code> on your local computer, such as using your favorite editor to create a file named <code>myfirstlocalfile.txt</code> with any content in it. Or for the sake of demonstration, you can use the following Linux command to create this file containing the line <code>#My first local file</code>.</p>
+<p><code>echo "#My first local file" &gt;&gt; myfirstlocalfile.txt</code></p></li>
+<li><p>In the terminal, <code>git add .</code> This will add all changes to the <strong>staging area</strong>.</p></li>
+<li><p>Now you are ready to <strong>commit</strong> the changes, which versions the current files in the directory.</p>
+<p><code>git commit -m "my first commit from local"</code></p></li>
+<li><p>Now you are ready to sync with the remote repo.</p>
+<p><code>git push</code></p>
+<p>The GitHub might ask you to sign in for the first time. Choose <code>Sign in with your brower</code> to sign in to complete it.</p></li>
+</ol>
+</section>
+<section id="initializing-a-git-directory-locally-first" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="initializing-a-git-directory-locally-first"><span class="header-section-number">4.2.2</span> Initializing a Git Directory Locally First</h3>
+<p>The previous approach initializes a local Git repo by cloning a remote repo. You can also initializing a local Git repo by using <code>git init</code>. Follow the following steps:</p>
 <ol start="3" type="1">
-<li><p>Sign in to your github account.</p></li>
+<li><p>Sign in to your GitHub account.</p></li>
 <li><p>Create a GitHub <strong>empty</strong> repo (such as named <code>homework0</code>) on <code>GitHub</code> (<a href="https://github.com" class="uri">https://github.com</a>) but make sure it is empty (do not add Readme.md file)</p></li>
 <li><p>Start a Git Bash Terminal window on your local computer (You could also use the Terminal Window in RStudio or VSC). Navigate to the project directory; if you haven’t yet created a project directory such as <code>homework0</code>, do</p>
 <p><code>mkdir project_dir</code> Example: <code>mkdir homework0</code></p>
 <p>Use <code>cd project_directory_name</code> to enter your local project directory;</p>
-<p><code>cd ..</code> # back to the dir of the parent level of the current dir</p>
-<p>use <code>ls</code> to list all files and directories or use <code>ls -al</code> to include all hidden files and directories. In your local Git Terminal, (note at this moment your local project directory is empty)</p>
+<p>Use <code>ls</code> to list all files and directories or use <code>ls -al</code> to include all hidden files and directories. In your local Git Terminal, (note at this moment your local project directory is empty)</p>
 <pre><code>echo "# homework0" &gt;&gt; README.md  #create a file README.md
 git init
-git add README.md
-git commit -m "first commit"
 git branch -M main #rename the branch name to main
+git add .
+git commit -m "first commit"
 git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
 git push -u origin main</code></pre>
 <p>if your local project directory already 1) contains files and 2) had performed <code>init git</code> before, then</p>
 <pre><code>git remote add origin https://github.com/ywanglab/homework0.git` #(change the remote to your remote repo)
 git branch -M main
 git push -u origin main</code></pre></li>
-<li><p>in the pop-out <code>GitHub Sign in</code> window, click on <code>Sign in with your browser</code>.</p></li>
+<li><p>in the pop-out <code>GitHub Sign-in</code> window, click on <code>Sign in with your browser</code>.</p></li>
 </ol>
-</section>
-<section id="clone-an-existing-github-account" class="level3" data-number="4.2.2">
-<h3 data-number="4.2.2" class="anchored" data-anchor-id="clone-an-existing-github-account"><span class="header-section-number">4.2.2</span> Clone an existing GitHub account</h3>
-<p>This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.</p>
-<p><code>git clone https://github.com/ywanglab/tflite-pi.git</code> (change the remote repo to your remote repo)</p>
 </section>
 </section>
 <section id="some-other-common-commands" class="level2" data-number="4.3">
@@ -245,26 +258,19 @@ git push -u origin main</code></pre></li>
 <li><p>check git status: <code>git status</code></p></li>
 <li><p><code>git add filename</code> or <code>git add .</code># to add everything</p></li>
 <li><p>use <code>git log</code> to check all commits. Use <code>git log --pretty=oneline</code> for shorter display.</p></li>
-<li><p>use <code>git checkout .</code> to revert back to previous commit. Any changes after the previous commit will be abandoned.</p></li>
+<li><p>use <code>git checkout .</code> to revert back to the previous commit. Any changes after the previous commit will be abandoned.</p></li>
 <li><p>to get to a previous commit, use <code>git checkout six_character_commit_ID</code>. To get back to main, use <code>git checkout main</code>.</p></li>
 <li><p>To permanently go back to a previous commit, use</p>
 <p><code>git reset –hard six_char_commit_ID</code></p></li>
 <li><p><code>git remote -v</code> Get the reminder of the remote repo</p></li>
 <li><p>if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:</p></li>
 </ol>
-<pre><code>```         
-git rm -rf --cached file1.txt # otherwise, remove --cached
-git commit -m "remove file1.txt" 
-
-```
-
-And to push changes to remote repo
-
-```         
-git push origin branch_name
-```</code></pre>
+<pre><code>git rm -rf --cached file1.txt # otherwise, remove --cached
+git commit -m "remove file1.txt" </code></pre>
+<p>And to push changes to remote repo</p>
+<pre><code>git push origin main</code></pre>
 <ol start="14" type="1">
-<li>you might need to tell GitHub who you are. To to this type the following two commands in your terminal window:</li>
+<li>For some operating system, such as Mac or Linux, you might be asked to tell GitHub who you are. When you are prompted, type the following two commands in your terminal window:</li>
 </ol>
 <pre><code>git config --global user.name "Your Name" 
 git config --global user.mail "your@email.com"</code></pre>
@@ -289,7 +295,7 @@ git config --global user.mail "your@email.com"</code></pre>
 </section>
 <section id="merge-branch-to-main-branch" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="merge-branch-to-main-branch"><span class="header-section-number">4.6</span> Merge branch to main branch</h2>
-<p>Switch the branch again to the main using<br>
+<p>Switch from a branch (with name such as <code>branchname</code> to the <code>main</code> using<br>
 <code>git checkout main</code></p>
 <p>on the <code>main</code> branch, Merge command to merge the branches<br>
 <code>git merge branchname</code></p>
@@ -308,7 +314,7 @@ git status                            # Lists all staged changes
 git commit -m '[your commit message]' # Makes a git commit</code></pre>
 <p><strong>Make a pull request.</strong> A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:</p>
 <pre><code>git push origin HEAD # Push current branch to the same branch on GitHub</code></pre>
-<p>Now, open the remote GitHub repo such as: <a href="https://github.com/DS-100/textbook">https://github.com/ywanglab/textbook</a> in your browser. You should see a <strong>green</strong> button titled “Compare &amp; pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button.</p></li>
+<p>Now, open the remote GitHub repo that you cloned such as: <a href="https://github.com/DS-100/textbook">https://github.com/ywanglab/textbook</a> in your browser. You should see a <strong>green</strong> button titled “Compare &amp; pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button.</p></li>
 </ol></li>
 </ol>
 </section>
