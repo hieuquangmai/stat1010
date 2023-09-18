@@ -170,6 +170,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#merge-branch-to-main-branch" id="toc-merge-branch-to-main-branch" class="nav-link" data-scroll-target="#merge-branch-to-main-branch"><span class="header-section-number">4.6</span> Merge branch to main branch</a></li>
   <li><a href="#collaborate-directly-by-cloning-the-authors-github-repo" id="toc-collaborate-directly-by-cloning-the-authors-github-repo" class="nav-link" data-scroll-target="#collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">4.7</span> Collaborate directly by cloning the author’s github repo</a></li>
   <li><a href="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" id="toc-collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="nav-link" data-scroll-target="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">4.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</a></li>
+  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice"><span class="header-section-number">4.9</span> Practice</a></li>
   </ul>
 </nav>
     </div>
@@ -249,6 +250,7 @@ git push -u origin main</code></pre>
 git branch -M main
 git push -u origin main</code></pre></li>
 <li><p>in the pop-out <code>GitHub Sign-in</code> window, click on <code>Sign in with your browser</code>.</p></li>
+<li><p>Note an empty folder would not be pushed to the remote repo until it has a file (even empty) in it.</p></li>
 </ol>
 </section>
 </section>
@@ -324,6 +326,34 @@ git commit -m '[your commit message]' # Makes a git commit</code></pre>
 <li>after forking a GitHub repo to your own GitHub account, <code>git clone</code> that account to your local repo.</li>
 <li>make changes to a file, and <code>git add, commit and push</code> the changes to the remote repo in your account.</li>
 <li>Then go to your remote repo on the GitHub site and <strong>Create pull request</strong>.</li>
+</ol>
+</section>
+<section id="practice" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="practice"><span class="header-section-number">4.9</span> Practice</h2>
+<ol type="1">
+<li>Please git clone the course directory</li>
+</ol>
+<p><code>git clone https://github.com/ywanglab/stat1010.git</code></p>
+<p>to your local computer</p>
+<ol start="2" type="1">
+<li>create a new branch called: <code>YourFirstName_branch</code> by</li>
+</ol>
+<p><code>git branch YourFirstName_branch</code></p>
+<ol start="3" type="1">
+<li>enter this branch:</li>
+</ol>
+<p><code>git checkout YourFirstName_branch</code></p>
+<ol start="4" type="1">
+<li>add your resume file in the folder <code>./resume</code></li>
+</ol>
+<p><code>git add</code>, <code>commit</code> and <code>push</code> your changes to the upstream repo using</p>
+<pre><code>git add .
+
+git commit -m "added YourFirstName's resume"
+
+git push origin HEAD</code></pre>
+<ol start="5" type="1">
+<li>Now, open the remote GitHub repo that you cloned such as:<a href="https://github.com/ywanglab/stat1010" class="uri">https://github.com/ywanglab/stat1010</a>in your browser. You should see a <strong>green</strong> button titled “Compare &amp; pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button.</li>
 </ol>
 
 
