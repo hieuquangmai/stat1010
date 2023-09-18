@@ -81,6 +81,8 @@ The previous approach initializes a local Git repo by cloning a remote repo. You
 
 6.  in the pop-out `GitHub Sign-in` window, click on `Sign in with your browser`.
 
+7.  Note an empty folder would not be pushed to the remote repo until it has a file (even empty) in it.
+
 ## Some other common commands
 
 6.  check git status: `git status`
