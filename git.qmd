@@ -104,7 +104,7 @@ The previous approach initializes a local Git repo by cloning a remote repo. You
 13. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
 
 ```         
-git rm -rf --cached file1.txt # otherwise, remove --cached
+git rm -rf --cached file1.txt #This will only remote files; If intending to remove local files too, remove --cached
 git commit -m "remove file1.txt" 
 ```
 
@@ -169,15 +169,15 @@ on the `main` branch, Merge command to merge the branches\
         git push origin HEAD # Push current branch to the same branch on GitHub
         ```
 
-        Now, open the remote GitHub repo that you cloned such as: [https://github.com/ywanglab/textbook](https://github.com/DS-100/textbook) in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
+        Now, open the remote GitHub repo that you cloned such as: https://github.com/ywanglab/stat1010 in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
 
 ## Collaborate by fork a GitHub repo and commit the fork repo and create a pull request
 
 20. after forking a GitHub repo to your own GitHub account, `git clone` that account to your local repo.
-21. make changes to a file, and `git add, commit and push` the changes to the remote repo in your account.
+21. make changes to a file, and `git add, commit and git push origin HEAD` the changes to the remote repo in your account.
 22. Then go to your remote repo on the GitHub site and **Create pull request**.
 
-## Practice
+## Project
 
 1.  Please git clone the course directory
 
