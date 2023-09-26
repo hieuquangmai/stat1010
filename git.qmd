@@ -65,13 +65,21 @@ The previous approach initializes a local Git repo by cloning a remote repo. You
     echo "# homework0" >> README.md  #create a file README.md
     git init
     git branch -M main #rename the branch name to main
-    git add .
+    git add .  # maybe be changed to git add --all
     git commit -m "first commit"
     git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
-    git push -u origin main
+    git push -u origin main 
     ```
 
-    if your local project directory already 1) contains files and 2) had performed `init git` before, then
+    Note:
+
+    1)  the general command format: `git push [remote-name] [branch-name]`
+
+    2)  difference between `git add .` and `git add --all`: `git add .`: stages changes in the current directory and its subdirectories but does not include file deletions `git add --all`: stages changes in the entire working tree, including deletions and untracked files. It is a more aggressive option and can be useful when you want to ensure that every change, including file deletions, is included in the next commit.
+
+        `git add –all` is equivalent to `git add -A`
+
+6.  if your local project directory already 1) contains files and 2) had performed `init git` before, then
 
     ```         
     git remote add origin https://github.com/ywanglab/homework0.git` #(change the remote to your remote repo)
@@ -79,29 +87,37 @@ The previous approach initializes a local Git repo by cloning a remote repo. You
     git push -u origin main
     ```
 
-6.  in the pop-out `GitHub Sign-in` window, click on `Sign in with your browser`.
+7.  in the pop-out `GitHub Sign-in` window, click on `Sign in with your browser`.
 
-7.  Note an empty folder would not be pushed to the remote repo until it has a file (even empty) in it.
+8.  Note an empty folder would not be pushed to the remote repo until it has a file (even empty) in it.
 
 ## Some other common commands
 
-6.  check git status: `git status`
+6.  check git status: `git status` and `git status --short` for a compact way.
 
-7.  `git add filename` or `git add .`\# to add everything
+7.  `git commit -a -m "message"` will stage and commit every changed, already tracked file without using `git add changed_file`
 
-8.  use `git log` to check all commits. Use `git log --pretty=oneline` for shorter display.
+8.  `git add filename` or `git add .`
 
-9.  use `git checkout .` to revert back to the previous commit. Any changes after the previous commit will be abandoned.
+    \# add changes to the staging environment, i.e., git repo to start track those changes.
 
-10. to get to a previous commit, use `git checkout six_character_commit_ID`. To get back to main, use `git checkout main`.
+9.  use `git log` to check all commits. Use `git log --pretty=oneline` for shorter display.
 
-11. To permanently go back to a previous commit, use
+    `git log origin/main` #check the remote repo `origin/main` commits
+
+10. use `git diff origin/main` to show the differences between our local `main` and `origin/main`.
+
+11. use `git checkout .` to revert back to the previous commit. Any changes after the previous commit will be abandoned.
+
+12. to get to a previous commit, use `git checkout six_character_commit_ID`. To get back to main, use `git checkout main`.
+
+13. To permanently go back to a previous commit, use
 
     `git reset –hard six_char_commit_ID`
 
-12. `git remote -v` Get the reminder of the remote repo
+14. `git remote -v` Get the reminder of the remote repo
 
-13. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
+15. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
 
 ```         
 git rm -rf --cached file1.txt #This will only remote files; If intending to remove local files too, remove --cached
@@ -111,7 +127,7 @@ git commit -m "remove file1.txt"
 And to push changes to remote repo
 
 ```         
-git push origin main
+git push origin main 
 ```
 
 14. For some operating system, such as Mac or Linux, you might be asked to tell GitHub who you are. When you are prompted, type the following two commands in your terminal window:
@@ -121,25 +137,38 @@ git config --global user.name "Your Name"
 git config --global user.mail "your@email.com"
 ```
 
-This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that **you need to use the email account that you used to open your GitHub account**.
+This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that **you need to use the email account that you used to open your GitHub account**. `global` sets the username and em-mail for **every repo** on your computer. If you want to set the username/e-mail just for the current repo, remove `global`.
+
+## Use Git help
+
+1.  `git command -help` See all the available options for the specific command. Use \``--help` instead of `-help` to open the relevant Git manual page.
+2.  `git help --all` See all possible commands
 
 ## When the upstream repo changes
 
 When Git tells you the upstream repo is ahead,
 
-15. Do `git pull`. Then you can commit and push a new version to the remote repo.
+15. Do `git pull` or `git pull origin`
+
+    This is equivalent to `git fetch origin`, and then `git merge origin/main.`Then you can commit and push a new version to the remote repo.
+
+16. `git pull` will not pull a new branches on the remote repo to local, but it will inform you if there is a new branch on the remote repo. In this case, just `git checkout the_remote_new_branch_name` will be pulled to local. Note there is **no need** to create the branch by `git branch the_remote_new_branch_name`
 
 ## Create branch
 
 16. To add a branch to the main branch `git branch branchname`
 
-Switch the branch `git checkout branchname`
+    Switch the branch `git checkout branchname`
+
+    To combine the above two actions, `git checkout -b branchname`, create a new branch named `branchname` if it does not exist and move to it.
 
 Adding a file in branch `echo "#content" >> filename.txt`
 
 Then `add` the file and commit the file. To create the branch remotely we **have to use**
 
-`git push --set-upstream origin branchname`
+`git push --set-upstream origin branchname` The option `--set-upstream` can be replaced by `-u`
+
+to see all branches in both local and remote: `git branch -a` Or `git branch -r` for remote only.
 
 ## Merge branch to main branch
 
@@ -149,7 +178,11 @@ Switch from a branch (with name such as `branchname` to the `main` using\
 on the `main` branch, Merge command to merge the branches\
 `git merge branchname`
 
-## Collaborate directly by cloning the author's github repo
+To delete a branch:
+
+`git branch -d branchname`
+
+## Contribute directly by cloning the author's github repo
 
 16. `git clone remote-repo` to a local directory
 17. create a new branch: `git branch [your_branch_name]`
@@ -158,12 +191,12 @@ on the `main` branch, Merge command to merge the branches\
     1.  **Commit your changes locally.** Once you are ready to submit your changes, run these commands in your terminal:
 
         ```         
-        git add -A                            # Stages all changes 
+        git add -A                            # Stages all changes, short for --all 
         git status                            # Lists all staged changes 
         git commit -m '[your commit message]' # Makes a git commit
         ```
 
-        **Make a pull request.** A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:
+        **Make a pull request.** (A pull request is a proposal to change) A GitHub pull request allows a collaborator to review and make comments on your changes you proposed. Once approved, the collaborator can merge the changes. Run:
 
         ```         
         git push origin HEAD # Push current branch to the same branch on GitHub
@@ -171,7 +204,7 @@ on the `main` branch, Merge command to merge the branches\
 
         Now, open the remote GitHub repo that you cloned such as: https://github.com/ywanglab/stat1010 in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
 
-## Collaborate by fork a GitHub repo and commit the fork repo and create a pull request
+## Contribute by fork a GitHub repo and commit the fork repo and create a pull request
 
 20. after forking a GitHub repo to your own GitHub account, `git clone` that account to your local repo.
 21. make changes to a file, and `git add, commit and git push origin HEAD` the changes to the remote repo in your account.
