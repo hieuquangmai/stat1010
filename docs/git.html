@@ -165,12 +165,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#initializing-a-git-directory-locally-first" id="toc-initializing-a-git-directory-locally-first" class="nav-link" data-scroll-target="#initializing-a-git-directory-locally-first"><span class="header-section-number">4.2.2</span> Initializing a Git Directory Locally First</a></li>
   </ul></li>
   <li><a href="#some-other-common-commands" id="toc-some-other-common-commands" class="nav-link" data-scroll-target="#some-other-common-commands"><span class="header-section-number">4.3</span> Some other common commands</a></li>
-  <li><a href="#when-the-upstream-repo-changes" id="toc-when-the-upstream-repo-changes" class="nav-link" data-scroll-target="#when-the-upstream-repo-changes"><span class="header-section-number">4.4</span> When the upstream repo changes</a></li>
-  <li><a href="#create-branch" id="toc-create-branch" class="nav-link" data-scroll-target="#create-branch"><span class="header-section-number">4.5</span> Create branch</a></li>
-  <li><a href="#merge-branch-to-main-branch" id="toc-merge-branch-to-main-branch" class="nav-link" data-scroll-target="#merge-branch-to-main-branch"><span class="header-section-number">4.6</span> Merge branch to main branch</a></li>
-  <li><a href="#collaborate-directly-by-cloning-the-authors-github-repo" id="toc-collaborate-directly-by-cloning-the-authors-github-repo" class="nav-link" data-scroll-target="#collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">4.7</span> Collaborate directly by cloning the author’s github repo</a></li>
-  <li><a href="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" id="toc-collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="nav-link" data-scroll-target="#collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">4.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice"><span class="header-section-number">4.9</span> Practice</a></li>
+  <li><a href="#use-git-help" id="toc-use-git-help" class="nav-link" data-scroll-target="#use-git-help"><span class="header-section-number">4.4</span> Use Git help</a></li>
+  <li><a href="#when-the-upstream-repo-changes" id="toc-when-the-upstream-repo-changes" class="nav-link" data-scroll-target="#when-the-upstream-repo-changes"><span class="header-section-number">4.5</span> When the upstream repo changes</a></li>
+  <li><a href="#create-branch" id="toc-create-branch" class="nav-link" data-scroll-target="#create-branch"><span class="header-section-number">4.6</span> Create branch</a></li>
+  <li><a href="#merge-branch-to-main-branch" id="toc-merge-branch-to-main-branch" class="nav-link" data-scroll-target="#merge-branch-to-main-branch"><span class="header-section-number">4.7</span> Merge branch to main branch</a></li>
+  <li><a href="#contribute-directly-by-cloning-the-authors-github-repo" id="toc-contribute-directly-by-cloning-the-authors-github-repo" class="nav-link" data-scroll-target="#contribute-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">4.8</span> Contribute directly by cloning the author’s github repo</a></li>
+  <li><a href="#contribute-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" id="toc-contribute-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="nav-link" data-scroll-target="#contribute-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">4.9</span> Contribute by fork a GitHub repo and commit the fork repo and create a pull request</a></li>
+  <li><a href="#project" id="toc-project" class="nav-link" data-scroll-target="#project"><span class="header-section-number">4.10</span> Project</a></li>
   </ul>
 </nav>
     </div>
@@ -241,11 +242,17 @@ ul.task-list li input[type="checkbox"] {
 <pre><code>echo "# homework0" &gt;&gt; README.md  #create a file README.md
 git init
 git branch -M main #rename the branch name to main
-git add .
+git add .  # maybe be changed to git add --all
 git commit -m "first commit"
 git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
-git push -u origin main</code></pre>
-<p>if your local project directory already 1) contains files and 2) had performed <code>init git</code> before, then</p>
+git push -u origin main </code></pre>
+<p>Note:</p>
+<ol type="1">
+<li><p>the general command format: <code>git push [remote-name] [branch-name]</code></p></li>
+<li><p>difference between <code>git add .</code> and <code>git add --all</code>: <code>git add .</code>: stages changes in the current directory and its subdirectories but does not include file deletions <code>git add --all</code>: stages changes in the entire working tree, including deletions and untracked files. It is a more aggressive option and can be useful when you want to ensure that every change, including file deletions, is included in the next commit.</p>
+<p><code>git add –all</code> is equivalent to <code>git add -A</code></p></li>
+</ol></li>
+<li><p>if your local project directory already 1) contains files and 2) had performed <code>init git</code> before, then</p>
 <pre><code>git remote add origin https://github.com/ywanglab/homework0.git` #(change the remote to your remote repo)
 git branch -M main
 git push -u origin main</code></pre></li>
@@ -257,9 +264,13 @@ git push -u origin main</code></pre></li>
 <section id="some-other-common-commands" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="some-other-common-commands"><span class="header-section-number">4.3</span> Some other common commands</h2>
 <ol start="6" type="1">
-<li><p>check git status: <code>git status</code></p></li>
-<li><p><code>git add filename</code> or <code>git add .</code># to add everything</p></li>
-<li><p>use <code>git log</code> to check all commits. Use <code>git log --pretty=oneline</code> for shorter display.</p></li>
+<li><p>check git status: <code>git status</code> and <code>git status --short</code> for a compact way.</p></li>
+<li><p><code>git commit -a -m "message"</code> will stage and commit every changed, already tracked file without using <code>git add changed_file</code></p></li>
+<li><p><code>git add filename</code> or <code>git add .</code></p>
+<p># add changes to the staging environment, i.e., git repo to start track those changes.</p></li>
+<li><p>use <code>git log</code> to check all commits. Use <code>git log --pretty=oneline</code> for shorter display.</p>
+<p><code>git log origin/main</code> #check the remote repo <code>origin/main</code> commits</p></li>
+<li><p>use <code>git diff origin/main</code> to show the differences between our local <code>main</code> and <code>origin/main</code>.</p></li>
 <li><p>use <code>git checkout .</code> to revert back to the previous commit. Any changes after the previous commit will be abandoned.</p></li>
 <li><p>to get to a previous commit, use <code>git checkout six_character_commit_ID</code>. To get back to main, use <code>git checkout main</code>.</p></li>
 <li><p>To permanently go back to a previous commit, use</p>
@@ -267,43 +278,56 @@ git push -u origin main</code></pre></li>
 <li><p><code>git remote -v</code> Get the reminder of the remote repo</p></li>
 <li><p>if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:</p></li>
 </ol>
-<pre><code>git rm -rf --cached file1.txt # otherwise, remove --cached
+<pre><code>git rm -rf --cached file1.txt #This will only remote files; If intending to remove local files too, remove --cached
 git commit -m "remove file1.txt" </code></pre>
 <p>And to push changes to remote repo</p>
-<pre><code>git push origin main</code></pre>
+<pre><code>git push origin main </code></pre>
 <ol start="14" type="1">
 <li>For some operating system, such as Mac or Linux, you might be asked to tell GitHub who you are. When you are prompted, type the following two commands in your terminal window:</li>
 </ol>
 <pre><code>git config --global user.name "Your Name" 
 git config --global user.mail "your@email.com"</code></pre>
-<p>This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that <strong>you need to use the email account that you used to open your GitHub account</strong>.</p>
+<p>This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that <strong>you need to use the email account that you used to open your GitHub account</strong>. <code>global</code> sets the username and em-mail for <strong>every repo</strong> on your computer. If you want to set the username/e-mail just for the current repo, remove <code>global</code>.</p>
 </section>
-<section id="when-the-upstream-repo-changes" class="level2" data-number="4.4">
-<h2 data-number="4.4" class="anchored" data-anchor-id="when-the-upstream-repo-changes"><span class="header-section-number">4.4</span> When the upstream repo changes</h2>
+<section id="use-git-help" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="use-git-help"><span class="header-section-number">4.4</span> Use Git help</h2>
+<ol type="1">
+<li><code>git command -help</code> See all the available options for the specific command. Use `<code>--help</code> instead of <code>-help</code> to open the relevant Git manual page.</li>
+<li><code>git help --all</code> See all possible commands</li>
+</ol>
+</section>
+<section id="when-the-upstream-repo-changes" class="level2" data-number="4.5">
+<h2 data-number="4.5" class="anchored" data-anchor-id="when-the-upstream-repo-changes"><span class="header-section-number">4.5</span> When the upstream repo changes</h2>
 <p>When Git tells you the upstream repo is ahead,</p>
 <ol start="15" type="1">
-<li>Do <code>git pull</code>. Then you can commit and push a new version to the remote repo.</li>
+<li><p>Do <code>git pull</code> or <code>git pull origin</code></p>
+<p>This is equivalent to <code>git fetch origin</code>, and then <code>git merge origin/main.</code>Then you can commit and push a new version to the remote repo.</p></li>
+<li><p><code>git pull</code> will not pull a new branches on the remote repo to local, but it will inform you if there is a new branch on the remote repo. In this case, just <code>git checkout the_remote_new_branch_name</code> will be pulled to local. Note there is <strong>no need</strong> to create the branch by <code>git branch the_remote_new_branch_name</code></p></li>
 </ol>
 </section>
-<section id="create-branch" class="level2" data-number="4.5">
-<h2 data-number="4.5" class="anchored" data-anchor-id="create-branch"><span class="header-section-number">4.5</span> Create branch</h2>
+<section id="create-branch" class="level2" data-number="4.6">
+<h2 data-number="4.6" class="anchored" data-anchor-id="create-branch"><span class="header-section-number">4.6</span> Create branch</h2>
 <ol start="16" type="1">
-<li>To add a branch to the main branch <code>git branch branchname</code></li>
-</ol>
+<li><p>To add a branch to the main branch <code>git branch branchname</code></p>
 <p>Switch the branch <code>git checkout branchname</code></p>
+<p>To combine the above two actions, <code>git checkout -b branchname</code>, create a new branch named <code>branchname</code> if it does not exist and move to it.</p></li>
+</ol>
 <p>Adding a file in branch <code>echo "#content" &gt;&gt; filename.txt</code></p>
 <p>Then <code>add</code> the file and commit the file. To create the branch remotely we <strong>have to use</strong></p>
-<p><code>git push --set-upstream origin branchname</code></p>
+<p><code>git push --set-upstream origin branchname</code> The option <code>--set-upstream</code> can be replaced by <code>-u</code></p>
+<p>to see all branches in both local and remote: <code>git branch -a</code> Or <code>git branch -r</code> for remote only.</p>
 </section>
-<section id="merge-branch-to-main-branch" class="level2" data-number="4.6">
-<h2 data-number="4.6" class="anchored" data-anchor-id="merge-branch-to-main-branch"><span class="header-section-number">4.6</span> Merge branch to main branch</h2>
+<section id="merge-branch-to-main-branch" class="level2" data-number="4.7">
+<h2 data-number="4.7" class="anchored" data-anchor-id="merge-branch-to-main-branch"><span class="header-section-number">4.7</span> Merge branch to main branch</h2>
 <p>Switch from a branch (with name such as <code>branchname</code> to the <code>main</code> using<br>
 <code>git checkout main</code></p>
 <p>on the <code>main</code> branch, Merge command to merge the branches<br>
 <code>git merge branchname</code></p>
+<p>To delete a branch:</p>
+<p><code>git branch -d branchname</code></p>
 </section>
-<section id="collaborate-directly-by-cloning-the-authors-github-repo" class="level2" data-number="4.7">
-<h2 data-number="4.7" class="anchored" data-anchor-id="collaborate-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">4.7</span> Collaborate directly by cloning the author’s github repo</h2>
+<section id="contribute-directly-by-cloning-the-authors-github-repo" class="level2" data-number="4.8">
+<h2 data-number="4.8" class="anchored" data-anchor-id="contribute-directly-by-cloning-the-authors-github-repo"><span class="header-section-number">4.8</span> Contribute directly by cloning the author’s github repo</h2>
 <ol start="16" type="1">
 <li><code>git clone remote-repo</code> to a local directory</li>
 <li>create a new branch: <code>git branch [your_branch_name]</code></li>
@@ -311,25 +335,25 @@ git config --global user.mail "your@email.com"</code></pre>
 <li>Submitting your changes for review
 <ol type="1">
 <li><p><strong>Commit your changes locally.</strong> Once you are ready to submit your changes, run these commands in your terminal:</p>
-<pre><code>git add -A                            # Stages all changes 
+<pre><code>git add -A                            # Stages all changes, short for --all 
 git status                            # Lists all staged changes 
 git commit -m '[your commit message]' # Makes a git commit</code></pre>
-<p><strong>Make a pull request.</strong> A GitHub pull request allows a collaborator to review and make comments on your changes. Once approved, the collaborator can merge the changes. Run:</p>
+<p><strong>Make a pull request.</strong> (A pull request is a proposal to change) A GitHub pull request allows a collaborator to review and make comments on your changes you proposed. Once approved, the collaborator can merge the changes. Run:</p>
 <pre><code>git push origin HEAD # Push current branch to the same branch on GitHub</code></pre>
-<p>Now, open the remote GitHub repo that you cloned such as: <a href="https://github.com/DS-100/textbook">https://github.com/ywanglab/textbook</a> in your browser. You should see a <strong>green</strong> button titled “Compare &amp; pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button.</p></li>
+<p>Now, open the remote GitHub repo that you cloned such as: https://github.com/ywanglab/stat1010 in your browser. You should see a <strong>green</strong> button titled “Compare &amp; pull request”. Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the “Create pull request” button.</p></li>
 </ol></li>
 </ol>
 </section>
-<section id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="level2" data-number="4.8">
-<h2 data-number="4.8" class="anchored" data-anchor-id="collaborate-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">4.8</span> Collaborate by fork a GitHub repo and commit the fork repo and create a pull request</h2>
+<section id="contribute-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request" class="level2" data-number="4.9">
+<h2 data-number="4.9" class="anchored" data-anchor-id="contribute-by-fork-a-github-repo-and-commit-the-fork-repo-and-create-a-pull-request"><span class="header-section-number">4.9</span> Contribute by fork a GitHub repo and commit the fork repo and create a pull request</h2>
 <ol start="20" type="1">
 <li>after forking a GitHub repo to your own GitHub account, <code>git clone</code> that account to your local repo.</li>
-<li>make changes to a file, and <code>git add, commit and push</code> the changes to the remote repo in your account.</li>
+<li>make changes to a file, and <code>git add, commit and git push origin HEAD</code> the changes to the remote repo in your account.</li>
 <li>Then go to your remote repo on the GitHub site and <strong>Create pull request</strong>.</li>
 </ol>
 </section>
-<section id="practice" class="level2" data-number="4.9">
-<h2 data-number="4.9" class="anchored" data-anchor-id="practice"><span class="header-section-number">4.9</span> Practice</h2>
+<section id="project" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="project"><span class="header-section-number">4.10</span> Project</h2>
 <ol type="1">
 <li>Please git clone the course directory</li>
 </ol>
