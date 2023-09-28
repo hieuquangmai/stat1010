@@ -235,7 +235,7 @@ Note
 <li><p>Create a new file in the current local directory <code>homewor</code> on your local computer, such as using your favorite editor to create a file named <code>myfirstlocalfile.txt</code> with any content in it. Or for the sake of demonstration, you can use the following Linux command to create this file containing the line <code>#My first local file</code>.</p>
 <p><code>echo "#My first local file" &gt;&gt; myfirstlocalfile.txt</code></p></li>
 <li><p>In the terminal, <code>git add .</code> This will add all changes to the <strong>staging area</strong>. This lets Git start to track the changes to files in your local directory.</p></li>
-<li><p>Now you are ready to <strong>commit</strong> the changes, which versions (takes a snapshot of) the current files in the directory.</p>
+<li><p>Now you are ready to <strong>commit</strong> the changes, which versions (takes a snapshot of) the current files in the directory. A commit is a checkpoint where you can go back to.</p>
 <p><code>git commit -m "my first commit from local"</code></p></li>
 <li><p>Now you are ready to sync the local repo with the remote repo.</p>
 <p><code>git push</code></p>
@@ -294,13 +294,40 @@ git push -u origin main</code></pre></li>
 <li><p><code>git commit -a -m "message"</code> will stage and commit every changed, already tracked file without using <code>git add changed_file</code></p></li>
 <li><p><code>git add file_changed</code></p>
 <p># add <code>file_changed</code> to the staging environment, i.e., git repo to start track those changes.</p></li>
-<li><p>use <code>git log</code> to check all commits. Use <code>git log --pretty=oneline</code> for shorter display.</p>
+<li><p>use <code>git log</code> to check all commits. Use <code>git log --pretty=oneline</code> or just <code>git log --oneline</code> for shorter display.</p>
 <p><code>git log origin/main</code> #check the remote repo <code>origin/main</code> commits</p></li>
 <li><p>use <code>git diff origin/main</code> to show the differences between the local <code>main</code> and <code>origin/main</code>.</p></li>
 <li><p>use <code>git checkout .</code> to revert back to the previous commit. Any changes after the previous commit will be abandoned.</p></li>
-<li><p>to get to a previous commit, use <code>git checkout six_character_commit_ID</code>. To get back to main, use <code>git checkout main</code>.</p></li>
+<li><p>to get to a previous commit, use <code>git checkout seven_character_commit_hash</code>. To get back to main, use <code>git checkout main</code>.</p></li>
+<li><p>Git commit --amend</p></li>
+</ol>
+<pre><code>`commit --amend` is used to modify the most recent `commit`. It combines changes in the `staging environment` with the latest `commit`, and creates a new `commit`. This new `commit` replaces the latest `commit` entirely. Adding files with&nbsp;`--amend`&nbsp;works the same way as above. Just add them to the&nbsp;`staging environment`&nbsp;before committing.
+
+One of the simplest things you can do with&nbsp;`--amend`&nbsp;is to change a&nbsp;`commit`&nbsp;message with spelling errors.</code></pre>
+<ol start="9" type="1">
+<li><p>Git Revert HEAD:</p>
+<p>Revert the latest <code>commit</code> using git <code>revert HEAD</code> (<code>revert</code> the latest change, and then <code>commit</code>), adding the option <code>--no-edit</code> to skip the commit message editor (getting the default <code>revert</code> message):</p>
+<pre><code>git revert HEAD --no-edit</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To revert to earlier commits, use&nbsp;<code>git revert HEAD~x</code>&nbsp;(<em><code>x</code></em>&nbsp;being a number. 1 going back one more, 2 going back two more, etc.)</p>
+</div>
+</div></li>
+<li><p>Git Reset</p>
+<p><code>reset</code> is the command used when we want to move the repository back to a previous <code>commit</code>, discarding any changes made after that <code>commit</code>. <code>git reset seven-char-commit-hash</code></p></li>
+<li><p>Git Undo Reset</p>
+<p>Even though the commits are no longer showing up in the log, it is not removed from Git. If you know the commit hash you can reset to it:</p>
+<pre><code>git reset seven-char-commit-hash</code></pre></li>
 <li><p>To permanently go back to a previous commit, use</p>
-<p><code>git reset --hard six_char_commit_ID</code></p></li>
+<p><code>git reset --hard seven_char_commit_hash</code></p></li>
 <li><p><code>git remote -v</code> Get the reminder of the remote repo. To rename the remote origin: <code>git remote rename origin upsteam</code> rename remote repo <code>origin</code> to <code>upstream</code></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
