@@ -226,7 +226,7 @@ To delete a branch:
 
 `git branch -d branchname`
 
-## Contribute by fork a GitHub repo and commit to the forked repo and create a pull request
+## Contribute by forking a GitHub repo and commit to the forked repo and create a pull request
 
 1.  after forking a (foreign) GitHub repo to your own GitHub account, `git clone` that repo under your account to your local repo.
 
