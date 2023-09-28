@@ -17,49 +17,51 @@ I assume you already have an account on <https://github.com>. If not, you need t
 
 ## Establish a connection between a local repo and a remote GitHub repo
 
-### Clone an existing GitHub account
+### Clone an existing repo on GitHub
 
-This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead.
+This is an easier way to establish a connection between a local repo and a remote repo if the remote repo is created ahead. We will make a connection between a remote repo in your GitHub account and a local directory. If the remote repo is not under your account, then skip steps 1 and 2.
 
-1.  Sign in to your GitHub account, and create a GitHub repo (such as named `homework0`) on `GitHub` (<https://github.com>), you can add a README.md file or just choose not to add a README.md file.
+1.  Sign in to your GitHub account, and create a GitHub repo (such as named `homework`) on `GitHub` (<https://github.com>), you can add a README.md file or just choose not to add a README.md file.
 
-2.  On your local computer, open a `Git Bash` terminal. In the terminal, type `mkdir homework0` (create a folder named `homework0` within the current directory and then `cd homework0` (enter the directory `homework0`). The directory name `homework0` can be any name you want.
+2.  On your local computer, open a `Git Bash` terminal.
 
-3.  `git clone https://github.com/YourGitHubUserName/homework0.git` (change the remote repo to your remote repo).
+3.  Skip this step if you simply want the cloned repo to be in the current directory. Otherwise, In the terminal, type `mkdir myfolder` (create a folder named `myfolder` within the current directory) and then `cd myfolder` (change to the directory `myfolder`). The directory name `myfolder` can be any name you want.
+
+4.  `git clone https://github.com/Your_Git_UserName/homework.git` (change the remote repo path to match your actual remote repo).
 
     ::: callout-note
-    To specify a specific folder to clone to, add the name of the folder after the repository `URL`, like this: `git clone github-repo-URL myfolde`
+    To specify a specific folder to clone to, add the name of the folder after the repository `URL`, like this: `git clone github-repo-URL mylocalfolder`
     :::
 
-4.  Now you have established a connection between your local directory `homework0` and the remote repo `homework0` on GitHub.
+5.  Now you have established a connection between your local directory `homework` and the remote repo `homework` on GitHub.
 
-5.  Create a new file in the current local directory `homework0` on your local computer, such as using your favorite editor to create a file named `myfirstlocalfile.txt` with any content in it. Or for the sake of demonstration, you can use the following Linux command to create this file containing the line `#My first local file`.
+6.  Create a new file in the current local directory `homewor` on your local computer, such as using your favorite editor to create a file named `myfirstlocalfile.txt` with any content in it. Or for the sake of demonstration, you can use the following Linux command to create this file containing the line `#My first local file`.
 
     `echo "#My first local file" >> myfirstlocalfile.txt`
 
-6.  In the terminal, `git add .` This will add all changes to the **staging area**.
+7.  In the terminal, `git add .` This will add all changes to the **staging area**. This lets Git start to track the changes to files in your local directory.
 
-7.  Now you are ready to **commit** the changes, which versions the current files in the directory.
+8.  Now you are ready to **commit** the changes, which versions (takes a snapshot of) the current files in the directory.
 
     `git commit -m "my first commit from local"`
 
-8.  Now you are ready to sync with the remote repo.
+9.  Now you are ready to sync the local repo with the remote repo.
 
     `git push`
 
-    The GitHub might ask you to sign in for the first time. Choose `Sign in with your brower` to sign in to complete it.
+    The GitHub might ask you to sign in for the first time. Choose `Sign in with your brower` to sign in to complete the push.
 
 ### Initializing a Git Directory Locally First
 
-The previous approach initializes a local Git repo by cloning a remote repo. You can also initializing a local Git repo by using `git init`. Follow the following steps:
+The previous approach initializes a local Git repo by cloning a remote repo. You can also initialize a local Git repo by using `git init`. Follow the following steps:
 
 3.  Sign in to your GitHub account.
 
-4.  Create a GitHub **empty** repo (such as named `homework0`) on `GitHub` (<https://github.com>) but make sure it is empty (do not add Readme.md file)
+4.  Create a GitHub **empty** repo (such as named `homework`) on `GitHub` (<https://github.com>) but make sure it is empty (do not add Readme.md file)
 
-5.  Start a Git Bash Terminal window on your local computer (You could also use the Terminal Window in RStudio or VSC). Navigate to the project directory; if you haven't yet created a project directory such as `homework0`, do
+5.  Start a Git Bash Terminal window on your local computer (You could also use the Terminal Window in RStudio or VSC). Navigate to the project directory; if you haven't yet created a project directory such as `homework`, do
 
-    `mkdir project_dir` Example: `mkdir homework0`
+    `mkdir project_dir` Example: `mkdir homework`
 
     Use `cd project_directory_name` to enter your local project directory;
 
@@ -69,70 +71,74 @@ The previous approach initializes a local Git repo by cloning a remote repo. You
     echo "# homework0" >> README.md  #create a file README.md
     git init
     git branch -M main #rename the branch name to main
-    git add .  # maybe be changed to git add --all
+    git add .  # may use git add --all
     git commit -m "first commit"
-    git remote add origin https://github.com/ywanglab/homework0.git #(change the remote to your remote repo)
+    git remote add origin https://github.com/ywanglab/homework.git #(change the remote repo path to your remote repo)
     git push -u origin main 
     ```
 
-    Note:
+    ::: callout-note
+    1.  the general command format: `git push [remote-name] [branch-name]`
 
-    1)  the general command format: `git push [remote-name] [branch-name]`
+    2.  difference between `git add .` and `git add --all`:
 
-    2)  difference between `git add .` and `git add --all`: `git add .`: stages changes in the current directory and its subdirectories but does not include file deletions `git add --all`: stages changes in the entire working tree, including deletions and untracked files. It is a more aggressive option and can be useful when you want to ensure that every change, including file deletions, is included in the next commit.
+        `git add .`: stages changes in the current directory and its subdirectories but does not include file deletions
 
-        `git add –all` is equivalent to `git add -A`
+        `git add --all`: stages changes in the entire working tree, including deletions and untracked files. It is a more aggressive option and can be useful when you want to ensure that every change, including file deletions, is included in the next commit.
+
+        `git add --all` is equivalent to `git add -A`
+    :::
 
 6.  if your local project directory already 1) contains files and 2) had performed `init git` before, then
 
     ```         
-    git remote add origin https://github.com/ywanglab/homework0.git` #(change the remote to your remote repo)
+    git remote add origin https://github.com/ywanglab/homework.git` #(change the remote repo path to your remote repo path)
     git branch -M main
     git push -u origin main
     ```
 
 7.  in the pop-out `GitHub Sign-in` window, click on `Sign in with your browser`.
 
-8.  Note an empty folder would not be pushed to the remote repo until it has a file (even empty) in it.
+8.  Note an empty folder would not be pushed to the remote repo until it has a file (even an empty file) in it. In this case, you can create an empty file such as `.gitignore`
 
 ## Some other common commands
 
-6.  check git status: `git status` and `git status --short` for a compact way.
+1.  check git status: `git status` and `git status --short` for a compact way.
 
-7.  `git commit -a -m "message"` will stage and commit every changed, already tracked file without using `git add changed_file`
+2.  `git commit -a -m "message"` will stage and commit every changed, already tracked file without using `git add changed_file`
 
-8.  `git add filename` or `git add .`
+3.  `git add file_changed`
 
-    \# add changes to the staging environment, i.e., git repo to start track those changes.
+    \# add `file_changed` to the staging environment, i.e., git repo to start track those changes.
 
-9.  use `git log` to check all commits. Use `git log --pretty=oneline` for shorter display.
+4.  use `git log` to check all commits. Use `git log --pretty=oneline` for shorter display.
 
     `git log origin/main` #check the remote repo `origin/main` commits
 
-10. use `git diff origin/main` to show the differences between our local `main` and `origin/main`.
+5.  use `git diff origin/main` to show the differences between the local `main` and `origin/main`.
 
-11. use `git checkout .` to revert back to the previous commit. Any changes after the previous commit will be abandoned.
+6.  use `git checkout .` to revert back to the previous commit. Any changes after the previous commit will be abandoned.
 
-12. to get to a previous commit, use `git checkout six_character_commit_ID`. To get back to main, use `git checkout main`.
+7.  to get to a previous commit, use `git checkout six_character_commit_ID`. To get back to main, use `git checkout main`.
 
-13. To permanently go back to a previous commit, use
+8.  To permanently go back to a previous commit, use
 
-    `git reset –hard six_char_commit_ID`
+    `git reset --hard six_char_commit_ID`
 
-14. `git remote -v` Get the reminder of the remote repo. To rename the remote origin: `git remote rename origin upsteam` rename remote repo `origin` to `upstream`
+9.  `git remote -v` Get the reminder of the remote repo. To rename the remote origin: `git remote rename origin upsteam` rename remote repo `origin` to `upstream`
 
     ::: callout-note
-    According to Git naming conventions, it is recommended to name your own repository `origin` which you have read and write access. and the one you forked for `upstream` (which you only have read-only access.
+    According to Git naming conventions, it is recommended to name your own repository `origin` which you have read and write access; and the one you forked for `upstream` (which you only have read-only access.)
     :::
 
-15. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
+10. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
 
 ```         
 git rm -rf --cached file1.txt #This will only remote files; If intending to remove local files too, remove --cached
 git commit -m "remove file1.txt" 
 ```
 
-And to push changes to remote repo
+And then push changes to remote repo
 
 ```         
 git push origin main 
@@ -145,7 +151,7 @@ git config --global user.name "Your Name"
 git config --global user.mail "your@email.com"
 ```
 
-This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that **you need to use the email account that you used to open your GitHub account**. `global` sets the username and em-mail for **every repo** on your computer. If you want to set the username/e-mail just for the current repo, remove `global`.
+This will change the Git configuration in a way that anytime you use Git, it will know this information. Note that **you need to use the email account that you used to open your GitHub account**. `global` sets the username and e-mail for **every repo** on your computer. If you want to set the username/e-mail just for the current repo, remove `global`.
 
 ## Use Git help
 
@@ -160,7 +166,7 @@ When Git tells you the upstream repo is ahead,
 
     This is equivalent to `git fetch origin`, and then `git merge origin/main.`Then you can commit and push a new version to the remote repo.
 
-16. `git pull` will not pull a new branches on the remote repo to local, but it will inform you if there is a new branch on the remote repo. In this case, just `git checkout the_remote_new_branch_name` will be pulled to local. Note there is **no need** to create the branch by `git branch the_remote_new_branch_name`
+16. `git pull` will not pull a new branches on the remote repo to local, but it will inform you if there is a new branch on the remote repo. In this case, just `git checkout the_remote_new_branch_name` will pull the remote branch to local. Note there is **no need** to create locally the branch by `git branch the_remote_new_branch_name`
 
 ## Create branch
 
@@ -172,7 +178,7 @@ When Git tells you the upstream repo is ahead,
 
 Adding a file in branch `echo "#content" >> filename.txt`
 
-Then `add` the file and commit the file. To create the branch remotely we **have to use**
+Then `add` the file and commit the file. To push the branch to the remote repo we **have to use**
 
 `git push --set-upstream origin branchname` The option `--set-upstream` can be replaced by `-u`
 
@@ -180,11 +186,11 @@ to see all branches in both local and remote: `git branch -a` Or `git branch -r`
 
 ## Merge branch to main branch
 
-Switch from a branch (with name such as `branchname` to the `main` using\
-`git checkout main`
+1.  Switch from a branch (with name such as `branchname` to the `main` using\
+    `git checkout main`
 
-on the `main` branch, Merge command to merge the branches\
-`git merge branchname`
+2.  on the `main` branch, Merge command to merge the branches\
+    `git merge branchname`
 
 To delete a branch:
 
@@ -192,11 +198,11 @@ To delete a branch:
 
 ## Contribute by fork a GitHub repo and commit to the forked repo and create a pull request
 
-20. after forking a GitHub repo to your own GitHub account, `git clone` that account to your local repo.
+1.  after forking a (foreign) GitHub repo to your own GitHub account, `git clone` that repo under your account to your local repo.
 
-21. make changes in your local directory.
+2.  make changes in your local directory.
 
-22. Submitting your changes for review
+3.  Submitting your changes for review
 
     1.  **Commit your changes locally.** Once you are ready to submit your changes, run these commands in your terminal:
 
@@ -211,7 +217,7 @@ To delete a branch:
         git push origin # Push current branch to the same branch on GitHub
         ```
 
-23. Then go to your remote forked repo on the GitHub site and click `Contribute,`and then **Open pull request**, this will take you to the upstream repo. In the form, leave a message explaining the change, and **Create pull request**. **Do not** select `Close pull request` unless you want to cancel the pull request.
+4.  Then go to your remote forked repo in your account on the GitHub site and click **Contribute**,and then **Open pull request**, this will take you to the upstream repo. In the form, leave a message explaining the change, and **Create pull request**. **Do not** select `Close pull request` unless you want to cancel the pull request.
 
 ## Project
 
@@ -237,4 +243,4 @@ git commit -m "added YourFirstName's resume"
 git push origin
 ```
 
-5.  Then go to your remote forked repo on the GitHub site and click `Contribute,`and then **Open pull request**, this will take you to the upstream repo. In the form, leave a message explaining the change, and **Create pull request**. **Do not** select `Close pull request` unless you want to cancel the pull request.
+5.  Then go to your remote forked repo in your account on the GitHub site and click **Contribute**,and then **Open pull request**, this will take you to the upstream repo. In the form, leave a message explaining the change, and **Create pull request**. **Do not** select `Close pull request` unless you want to cancel the pull request.
