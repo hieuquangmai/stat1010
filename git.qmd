@@ -25,7 +25,11 @@ This is an easier way to establish a connection between a local repo and a remot
 
 2.  On your local computer, open a `Git Bash` terminal. In the terminal, type `mkdir homework0` (create a folder named `homework0` within the current directory and then `cd homework0` (enter the directory `homework0`). The directory name `homework0` can be any name you want.
 
-3.  `git clone https://github.com/YourGitHubUserName/homework0.git` (change the remote repo to your remote repo)
+3.  `git clone https://github.com/YourGitHubUserName/homework0.git` (change the remote repo to your remote repo).
+
+    ::: callout-note
+    To specify a specific folder to clone to, add the name of the folder after the repository `URL`, like this: `git clone github-repo-URL myfolde`
+    :::
 
 4.  Now you have established a connection between your local directory `homework0` and the remote repo `homework0` on GitHub.
 
@@ -115,7 +119,11 @@ The previous approach initializes a local Git repo by cloning a remote repo. You
 
     `git reset –hard six_char_commit_ID`
 
-14. `git remote -v` Get the reminder of the remote repo
+14. `git remote -v` Get the reminder of the remote repo. To rename the remote origin: `git remote rename origin upsteam` rename remote repo `origin` to `upstream`
+
+    ::: callout-note
+    According to Git naming conventions, it is recommended to name your own repository `origin` which you have read and write access. and the one you forked for `upstream` (which you only have read-only access.
+    :::
 
 15. if you want to remove the file only from the remote GitHub repository and not remove it from your local filesystem, use:
 
@@ -182,49 +190,40 @@ To delete a branch:
 
 `git branch -d branchname`
 
-## Contribute directly by cloning the author's github repo
+## Contribute by fork a GitHub repo and commit to the forked repo and create a pull request
 
-16. `git clone remote-repo` to a local directory
-17. create a new branch: `git branch [your_branch_name]`
-18. `git checkout [your_branch_name]`
-19. Submitting your changes for review
+20. after forking a GitHub repo to your own GitHub account, `git clone` that account to your local repo.
+
+21. make changes in your local directory.
+
+22. Submitting your changes for review
+
     1.  **Commit your changes locally.** Once you are ready to submit your changes, run these commands in your terminal:
 
         ```         
         git add -A                            # Stages all changes, short for --all 
-        git status                            # Lists all staged changes 
         git commit -m '[your commit message]' # Makes a git commit
         ```
 
-        **Make a pull request.** (A pull request is a proposal to change) A GitHub pull request allows a collaborator to review and make comments on your changes you proposed. Once approved, the collaborator can merge the changes. Run:
+    2.  **Make a pull request.** (A pull request is a proposal to change) A GitHub pull request allows the owner of the forked upstream repo to review and make comments on your changes you proposed. Once approved, the upstream owner can merge your changes. Run:
 
         ```         
-        git push origin HEAD # Push current branch to the same branch on GitHub
+        git push origin # Push current branch to the same branch on GitHub
         ```
 
-        Now, open the remote GitHub repo that you cloned such as: https://github.com/ywanglab/stat1010 in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
-
-## Contribute by fork a GitHub repo and commit the fork repo and create a pull request
-
-20. after forking a GitHub repo to your own GitHub account, `git clone` that account to your local repo.
-21. make changes to a file, and `git add, commit and git push origin HEAD` the changes to the remote repo in your account.
-22. Then go to your remote repo on the GitHub site and **Create pull request**.
+23. Then go to your remote forked repo on the GitHub site and click `Contribute,`and then **Open pull request**, this will take you to the upstream repo. In the form, leave a message explaining the change, and **Create pull request**. **Do not** select `Close pull request` unless you want to cancel the pull request.
 
 ## Project
 
-1.  Please git clone the course directory
+1.  First make sure you have forked the course repo `https://github.com/ywanglab/stat1010.git`
 
-`git clone https://github.com/ywanglab/stat1010.git`
+    to your own GitHub account.
+
+2.  Now go to your GitHub account, git clone the forked course repo
+
+`git clone https://github.com/your_git_user_name/stat1010.git`
 
 to your local computer
-
-2.  create a new branch called: `YourFirstName_branch` by
-
-`git branch YourFirstName_branch`
-
-3.  enter this branch:
-
-`git checkout YourFirstName_branch`
 
 4.  add your resume file in the folder `./resume`
 
@@ -235,7 +234,7 @@ git add .
 
 git commit -m "added YourFirstName's resume"
 
-git push origin HEAD
+git push origin
 ```
 
-5.  Now, open the remote GitHub repo that you cloned such as:<https://github.com/ywanglab/stat1010>in your browser. You should see a **green** button titled "Compare & pull request". Click that button. Fill out the form on the resulting page with a title and description for your changes. Finally, click the "Create pull request" button.
+5.  Then go to your remote forked repo on the GitHub site and click `Contribute,`and then **Open pull request**, this will take you to the upstream repo. In the form, leave a message explaining the change, and **Create pull request**. **Do not** select `Close pull request` unless you want to cancel the pull request.
