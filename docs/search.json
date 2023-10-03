@@ -112,10 +112,10 @@
     "text": "Yi Wang (boldfaced using ** **)\nEducator AUM\nThe following line is italicized using * *\nI am interest in data science because it is a discipline that I feel love with.\n\n5.0.1 Perform addtion\n\n# code block\n1+1\n\n2\n\n\n\n\n5.0.2 Horizontal Rule\nThree or more\nfirst rule using ***\n\nusing dashes —\n\nUsing (underscores) ___\n\n\n\n5.0.3 Bulet list\nusing *\n\nBird\nFrog\nCat\nDog\n\n\n\n5.0.4 Numbered list\nusing 1. item (there is a space between 1. and item)\n\nApple\nPear\nPeach\n\n\n\n5.0.5 Tables\n\n\n\nleft-aligned\ncentered\nright-aligned\n\n\n\n\n1/2/2020\nMary\nApple\n\n\n1/3\nJohnason\nTomato\n\n\n\n\n\n5.0.6 Hyperlinks\nClick here to access my github account.\n\n\n5.0.7 Images\n\n\n\nA computer monitor\n\n\n\n\n5.0.8 Code/Syntax highlighting\ns = \"Python syntax highlighting\"\nprint s\n\n\n5.0.9 Blocked quotes\nusing &gt;\n\nBlockquotes are very handy in email to emulate reply text.\n\n\nThis line is part of the same quote.\n\n\n\n5.0.10 Strikethrough\nusing ~~ before and after a phrase\nstrikethrough this"
   },
   {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "6  Summary",
+    "objectID": "assignment.html",
+    "href": "assignment.html",
+    "title": "6  Homework Assignments",
     "section": "",
-    "text": "In summary, this book has no content whatsoever."
+    "text": "I will use some assignments from https://cognitiveclass.ai.\n\nBrowser Course & Projects. Search for Python for Data Science. Enroll Now the class, and Go to the Course, and Start the Course.\nComplete the following assignments from Modules 1-4 and Part of Module 5. Excluding the API section in Module 5.\n\n\n\n\n\n\n\n\nModule\nContents\nSuggestioned Deadlines\n\n\n\n\nModule 1\nPython Basics\n10/09/2023\n\n\nModule 2\nPython Data Structures\n10/09/2023\n\n\nModule 3\nPython Prrogramming Fundamentals\n10/09/2023\n\n\nModule 4\nWorking with Data in Python\n10/16/2023\n\n\nModule 5\nWorking with Numpy Arrays (Excluding Simple APIs)\n10/16/2023\n\n\nFinal Exam\nOptional\n\n\n\n\nComplete all Practice Questions, Review Questions and Labs. After your completing all the assignments, click on Progress, print the page (in PDF or hard copy), and send it to me. The page should show your username on the top right corner.\nEnroll in the course Data Anlaysis with Python.\nComplete the following assignments.\n\n\n\nModule\nContents\nSuggestioned Deadlines\n\n\n\n\nModule 1\nIntroduction\n10/23/2023\n\n\nModule 2\nData Wrangling\n10/30/2023\n\n\nModule 3\nExploratory Data Analysis\n11/06/2023\n\n\n\nEnroll in the course Data Visualization with Python.\nComplete the following assignments.\n\n\n\nModule\nContents\nSuggestioned Deadlines\n\n\n\n\nModule 1\nIntroduction to Visualization\n11/13/2023\n\n\nModule 2\nBasic Visualization Tools\n11/20/2023\n\n\nModule 3\nSpecialized Visualization Tools\n11/27/2023\n\n\nModule 4\nAdvanced Visualizaiton Tools (Optional)"
   }
 ]

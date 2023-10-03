@@ -13,16 +13,17 @@ book:
     - r_comp_env.qmd
     - git.qmd
     - 1_lab_markdown.ipynb
-    - summary.qmd
+    - assignment.qmd
     - references.qmd
 
 bibliography: references.bib
-
+downloads: [pdf, docx]
 format:
   html:
     theme: cosmo
   pdf:
     documentclass: scrreprt
+    reference-doc: custom-reference-doc.docx
 
 
 
