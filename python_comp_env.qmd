@@ -1,7 +1,5 @@
 ---
 # title: "Setting up Python Computing Environment"
-format: html
-editor: visual
 ---
 
 # Setting-up Python Computing Environment

@@ -6,6 +6,7 @@ book:
   title: "STAT 1010 Lecture Notes"
   author: "Yi Wang"
   date: "8/11/2023"
+  downloads: [pdf, docx]
   chapters:
     - index.qmd
     - intro.qmd
@@ -17,7 +18,7 @@ book:
     - references.qmd
 
 bibliography: references.bib
-downloads: [pdf, docx]
+
 format:
   html:
     theme: cosmo

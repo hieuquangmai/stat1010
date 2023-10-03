@@ -1,10 +1,6 @@
 ---
 title: "Use Git and GitHub"
 author: "Yi Wang"
-format: 
-  html:
-    number-sections: true
-editor: visual
 ---
 
 I assume you already have an account on <https://github.com>. If not, you need to create an account there.
@@ -121,11 +117,13 @@ The previous approach initializes a local Git repo by cloning a remote repo. You
 
 7.  to get to a previous commit, use `git checkout seven_character_commit_hash`. To get back to main, use `git checkout main`.
 
-8.   Git commit \--amend
+8.  Git commit \--amend
 
-    `commit --amend` is used to modify the most recent `commit`. It combines changes in the `staging environment` with the latest `commit`, and creates a new `commit`. This new `commit` replaces the latest `commit` entirely. Adding files with `--amend` works the same way as above. Just add them to the `staging environment` before committing.
+```         
+`commit --amend` is used to modify the most recent `commit`. It combines changes in the `staging environment` with the latest `commit`, and creates a new `commit`. This new `commit` replaces the latest `commit` entirely. Adding files with `--amend` works the same way as above. Just add them to the `staging environment` before committing.
 
-    One of the simplest things you can do with `--amend` is to change a `commit` message with spelling errors.
+One of the simplest things you can do with `--amend` is to change a `commit` message with spelling errors.
+```
 
 9.  Git Revert HEAD:
 
