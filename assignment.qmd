@@ -6,7 +6,7 @@ I will use some assignments from <https://cognitiveclass.ai>.
 
 2.  Complete the following   assignments from `Modules 1-4` and Part of `Module 5.` Excluding the `API` section in `Module 5`. 
     
-    | Module   | Contents             | Suggestioned Deadlines |
+    | Module   | Contents             | Suggested Deadlines |
     |:----------|:--------------------|:-----------------------|
     | Module 1    | Python Basics   |     10/09/2023  |
     | Module 2    | Python Data Structures   |     10/09/2023  |
@@ -23,7 +23,7 @@ I will use some assignments from <https://cognitiveclass.ai>.
 
     Complete the following   assignments. 
     
-    | Module   | Contents             | Suggestioned Deadlines |
+    | Module   | Contents             | Suggested Deadlines |
     |:----------|:--------------------|:-----------------------|
     | Module 1    | Introduction   |     10/23/2023  |
     | Module 2    | Data Wrangling   |     10/30/2023  |
@@ -33,7 +33,7 @@ I will use some assignments from <https://cognitiveclass.ai>.
 
     Complete the following   assignments. 
     
-    | Module   | Contents             | Suggestioned Deadlines |
+    | Module   | Contents             | Suggested Deadlines |
     |:----------|:--------------------|:-----------------------|
     | Module 1    | Introduction to Visualization   |     11/13/2023  |
     | Module 2    | Basic Visualization Tools   |     11/20/2023  |
