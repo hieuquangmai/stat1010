@@ -1,7 +1,5 @@
 ---
 # title: "Setting up Python Computing Environment"
-format: html
-editor: visual
 ---
 
 # Setting-up Python Computing Environment
@@ -9,7 +7,6 @@ editor: visual
 ## Use Google Colab
 
 All you need is a Google account. Sign in your Google account in a browser, and navigate to Google Colab. Google Colab supports both `Python` and `R`. `Python` is the default engine. Change the engine to `R` in `Connect`-\>`change runtime type`. Then you are all set. Your file will be saved to your Google Drive or you can choose to send it to your `GitHub` account (recommended).
-
 
 ## On your own computer
 
@@ -29,7 +26,7 @@ All you need is a Google account. Sign in your Google account in a browser, and 
 
 7.  Activate the venv: `conda activate stat1010`
 
-8.  start VSC by typing `code .` in the anaconda terminal
+8.  start VSC by typing `code .` in the anaconda terminal.
 
 9.  open/create a `.ipynb` or `.py` file.
 
@@ -40,5 +37,3 @@ All you need is a Google account. Sign in your Google account in a browser, and 
 12. Continue to run other cells.
 
 13. After finishing using VSC, close the VSC, and deactivate the virtual environment in a conda terminal: `conda deactivate`
-
-
